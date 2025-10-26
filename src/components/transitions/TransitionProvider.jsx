@@ -90,7 +90,7 @@ export default function TransitionProvider({ children }) {
       });
     }, shellRef);
     return () => ctx.revert();
-  }, [reduced]);
+  }, [pathname, reduced]);
 
   return (
     <div ref={shellRef}>
