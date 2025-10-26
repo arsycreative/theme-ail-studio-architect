@@ -1,27 +1,40 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
-const ENQUIRY_TYPES = ["Project", "Collaboration", "Press"];
-
 export default function ContactForm() {
+  const t = useTranslations("contactForm");
   const WA_NUMBER = process.env.NEXT_PUBLIC_WA_NUMBER || "6281234567890";
+
+  const enquiryTypes = t.raw("types") ?? [];
+  const projectTypes = t.raw("projectTypes") ?? [];
+  const budgetPresets = t.raw("budgetPresets") ?? [];
+  const timelinePresets = t.raw("timelinePresets") ?? [];
+  const placeholders = t.raw("placeholders") ?? {};
+  const labels = t.raw("labels") ?? {};
+  const errorsCopy = t.raw("errors") ?? {};
+  const buttons = t.raw("buttons") ?? {};
+  const messageLabels = t.raw("messageLabels") ?? {};
+
+  const defaultEnquiryType = enquiryTypes[0] ?? "Project";
+  const defaultProjectType = projectTypes[0] ?? "Residential";
 
   const [state, setState] = useState("idle");
   const [startedAt] = useState(() => Date.now());
   const [errors, setErrors] = useState({});
-  const [selectedType, setSelectedType] = useState(ENQUIRY_TYPES[0]);
+  const [selectedType, setSelectedType] = useState(defaultEnquiryType);
 
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
     location: "",
-    projectType: "Residential",
+    projectType: defaultProjectType,
     budget: "",
     timeline: "",
     message: "",
@@ -39,32 +52,27 @@ export default function ContactForm() {
     [form, state]
   );
 
-  const budgetPresets = [
-    "Under USD 250k",
-    "USD 250k–500k",
-    "USD 500k–1M",
-    "USD 1M+",
-  ];
-  const timelinePresets = [
-    "0–3 months",
-    "3–6 months",
-    "6–12 months",
-    "12+ months",
-  ];
-
   function buildMessage() {
     const lines = [
-      `${selectedType} Enquiry — AIL Studio`,
+      t("whatsAppSubject", { type: selectedType || defaultEnquiryType }),
       "",
-      `Name: ${form.name}`,
-      `Email: ${form.email}`,
-      form.phone ? `WhatsApp: ${form.phone}` : null,
-      form.location ? `Location: ${form.location}` : null,
-      selectedType === "Project" ? `Type: ${form.projectType || "-"}` : null,
-      form.budget ? `Budget: ${form.budget}` : null,
-      form.timeline ? `Timeline: ${form.timeline}` : null,
+      `${messageLabels.name ?? "Name"}: ${form.name}`,
+      `${messageLabels.email ?? "Email"}: ${form.email}`,
+      form.phone ? `${messageLabels.phone ?? "WhatsApp"}: ${form.phone}` : null,
+      form.location
+        ? `${messageLabels.location ?? "Location"}: ${form.location}`
+        : null,
+      (selectedType || defaultEnquiryType) === defaultEnquiryType
+        ? `${messageLabels.type ?? "Type"}: ${form.projectType || "-"}`
+        : null,
+      form.budget
+        ? `${messageLabels.budget ?? "Budget"}: ${form.budget}`
+        : null,
+      form.timeline
+        ? `${messageLabels.timeline ?? "Timeline"}: ${form.timeline}`
+        : null,
       "",
-      "Message:",
+      messageLabels.message ?? "Message:",
       form.message,
     ].filter(Boolean);
     return lines.join("\n");
@@ -76,7 +84,7 @@ export default function ContactForm() {
     const elapsed = Date.now() - startedAt;
     if (elapsed < 2500) {
       setState("error");
-      setErrors({ global: "Please take a moment to complete the form." });
+      setErrors({ global: errorsCopy.global });
       return;
     }
     if (form.company) {
@@ -85,11 +93,11 @@ export default function ContactForm() {
     }
 
     const nextErr = {};
-    if (!form.name.trim()) nextErr.name = "Name is required.";
+    if (!form.name.trim()) nextErr.name = errorsCopy.name;
     if (!/\S+@\S+\.\S+/.test(form.email))
-      nextErr.email = "Valid email is required.";
+      nextErr.email = errorsCopy.email;
     if (!form.message.trim())
-      nextErr.message = "Please tell us a bit about the project.";
+      nextErr.message = errorsCopy.message;
     if (Object.keys(nextErr).length) {
       setErrors(nextErr);
       return;
@@ -105,31 +113,45 @@ export default function ContactForm() {
     setState("success");
   }
 
+  useEffect(() => {
+    setSelectedType((prev) =>
+      enquiryTypes.includes(prev) ? prev : defaultEnquiryType
+    );
+    setForm((prev) => ({
+      ...prev,
+      projectType: projectTypes.includes(prev.projectType)
+        ? prev.projectType
+        : defaultProjectType,
+    }));
+  }, [enquiryTypes, defaultEnquiryType, projectTypes, defaultProjectType]);
+
   return (
     <form onSubmit={onSubmit} className="space-y-6" noValidate>
       {/* Header */}
       <div className="space-y-1">
-        <h2 className="text-xl md:text-2xl font-semibold">Project Enquiry</h2>
+        <h2 className="text-xl md:text-2xl font-semibold">
+          {t("title")}
+        </h2>
         <p className="text-sm text-muted-foreground">
-          Balas via WhatsApp. Kami akan merespons dalam 2–3 hari kerja.
+          {t("description")}
         </p>
       </div>
 
       {/* Enquiry Type */}
       <div className="flex flex-wrap gap-2">
-        {ENQUIRY_TYPES.map((t) => (
+        {enquiryTypes.map((type) => (
           <button
-            key={t}
+            key={type}
             type="button"
-            onClick={() => setSelectedType(t)}
+            onClick={() => setSelectedType(type)}
             className={`px-3 py-1.5 rounded-full border text-xs ${
-              selectedType === t
+              selectedType === type
                 ? "border-foreground"
                 : "border-border/70 hover:border-border"
             }`}
-            aria-pressed={selectedType === t}
+            aria-pressed={selectedType === type}
           >
-            {t}
+            {type}
           </button>
         ))}
       </div>
@@ -154,7 +176,7 @@ export default function ContactForm() {
       <div className="grid md:grid-cols-2 gap-4">
         <div>
           <Input
-            placeholder="Full name *"
+            placeholder={placeholders.name}
             value={form.name}
             onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
             aria-invalid={!!errors.name}
@@ -165,7 +187,7 @@ export default function ContactForm() {
         </div>
         <div>
           <Input
-            placeholder="Email *"
+            placeholder={placeholders.email}
             type="email"
             value={form.email}
             onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
@@ -179,19 +201,19 @@ export default function ContactForm() {
 
       <div className="grid md:grid-cols-2 gap-4">
         <Input
-          placeholder="WhatsApp number (optional)"
+          placeholder={placeholders.phone}
           value={form.phone}
           onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
         />
         <Input
-          placeholder="Project location (city/country)"
+          placeholder={placeholders.location}
           value={form.location}
           onChange={(e) => setForm((f) => ({ ...f, location: e.target.value }))}
         />
       </div>
 
       {/* Project-specific fields */}
-      {selectedType === "Project" && (
+      {selectedType === defaultEnquiryType && (
         <div className="grid md:grid-cols-3 gap-4">
           <select
             className="rounded-xl border border-border/70 bg-background px-3 py-2 text-sm"
@@ -199,13 +221,11 @@ export default function ContactForm() {
             onChange={(e) =>
               setForm((f) => ({ ...f, projectType: e.target.value }))
             }
-            aria-label="Project type"
+            aria-label={labels.projectType}
           >
-            <option>Residential</option>
-            <option>Hospitality</option>
-            <option>Workspace</option>
-            <option>Retail</option>
-            <option>Mixed-use</option>
+            {projectTypes.map((type) => (
+              <option key={type}>{type}</option>
+            ))}
           </select>
 
           <div className="flex flex-wrap gap-2">
@@ -247,7 +267,7 @@ export default function ContactForm() {
       {/* Message */}
       <div>
         <Textarea
-          placeholder="Tell us about scope, rooms/areas, constraints, and goals. *"
+          placeholder={placeholders.message}
           rows={6}
           value={form.message}
           onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
@@ -261,15 +281,14 @@ export default function ContactForm() {
       {/* Submit */}
       <div className="flex items-center gap-3">
         <Button type="submit" className="rounded-xl" disabled={!canSubmit}>
-          {state === "sending" ? "Opening WhatsApp…" : "Send via WhatsApp"}
+          {state === "sending" ? buttons.submitting : buttons.submit}
         </Button>
         {errors.global && (
           <p className="text-sm text-red-600">{errors.global}</p>
         )}
         {state === "success" && (
           <p className="text-sm text-emerald-600">
-            Redirected to WhatsApp. If it didn’t open, allow pop-ups and try
-            again.
+            {t("success")}
           </p>
         )}
       </div>

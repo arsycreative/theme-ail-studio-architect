@@ -1,10 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function ProjectMediaCarousel({ images = [], slug }) {
   const [idx, setIdx] = useState(0);
   const n = images.length || 0;
+  const tCarousel = useTranslations("common.carousel");
+  const tCursor = useTranslations("common.cursor");
+  const tAlt = useTranslations("common.alt");
 
   const go = (d) => {
     if (!n) return;
@@ -31,13 +35,14 @@ export default function ProjectMediaCarousel({ images = [], slug }) {
           relative flex-1 min-h-0
           rounded-2xl overflow-hidden border border-border/70
         "
-        data-cursor="View"
+        data-cursor={tCursor("view")}
+        aria-label={tCarousel("viewerAria")}
       >
         {n > 0 && (
           <Image
             key={images[idx]}
             src={images[idx]}
-            alt={`${slug} image ${idx + 1}`}
+            alt={tAlt("projectImage")}
             fill
             className="object-cover"
             sizes="(min-width: 1536px) 63vw, (min-width: 1280px) 60vw, (min-width: 768px) 58vw, 100vw"
@@ -49,17 +54,17 @@ export default function ProjectMediaCarousel({ images = [], slug }) {
           type="button"
           className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/70 border border-border/60 rounded-full px-3.5 py-2 text-xs hover:bg-background/90"
           onClick={() => go(-1)}
-          aria-label="Previous image"
+          aria-label={tCarousel("prevAria")}
         >
-          Prev
+          {tCarousel("prev")}
         </button>
         <button
           type="button"
           className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/70 border border-border/60 rounded-full px-3.5 py-2 text-xs hover:bg-background/90"
           onClick={() => go(1)}
-          aria-label="Next image"
+          aria-label={tCarousel("nextAria")}
         >
-          Next
+          {tCarousel("next")}
         </button>
       </div>
 
@@ -75,11 +80,11 @@ export default function ProjectMediaCarousel({ images = [], slug }) {
                 ? "border-foreground"
                 : "border-border/70 hover:border-border"
             }`}
-            aria-label={`Select image ${i + 1}`}
+            aria-label={tCarousel("thumbAria", { index: i + 1 })}
           >
             <Image
               src={src}
-              alt={`${slug} thumb ${i + 1}`}
+              alt={tAlt("projectImage")}
               fill
               className="object-cover"
               sizes="200px"

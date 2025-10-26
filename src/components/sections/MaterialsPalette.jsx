@@ -1,12 +1,16 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { gsap } from "@/lib/gsap";
-import { materials } from "@/lib/data";
+import { getMaterials } from "@/lib/data";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function MaterialsPalette() {
   const ref = useRef(null);
-  const [active, setActive] = useState(materials[0].key);
+  const locale = useLocale();
+  const tMaterials = useTranslations("home.materialsPalette");
+  const materials = useMemo(() => getMaterials(locale), [locale]);
+  const [active, setActive] = useState(() => materials[0]?.key ?? null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -26,18 +30,31 @@ export default function MaterialsPalette() {
     return () => ctx.revert();
   }, []);
 
-  const current = materials.find((m) => m.key === active);
+  useEffect(() => {
+    setActive((prev) => {
+      if (!materials.some((m) => m.key === prev)) {
+        return materials[0]?.key ?? null;
+      }
+      return prev;
+    });
+  }, [materials]);
+
+  const current =
+    materials.find((m) => m.key === active) ?? materials[0] ?? null;
+
+  if (!current) {
+    return null;
+  }
 
   return (
     <section ref={ref} className="mx-auto max-w-7xl px-6 py-16">
       <div className="mb-8 flex items-end justify-between">
         <div>
           <h2 className="text-2xl md:text-3xl font-semibold">
-            Materials Palette
+            {tMaterials("title")}
           </h2>
           <p className="text-muted-foreground mt-2 max-w-2xl">
-            Tactile finishes curated for calm atmospheres and lasting
-            performance.
+            {tMaterials("description")}
           </p>
         </div>
       </div>
@@ -75,7 +92,7 @@ export default function MaterialsPalette() {
                     ? "border-foreground"
                     : "border-border/70 hover:border-border"
                 }`}
-                aria-label={`Select material ${m.name}`}
+                aria-label={tMaterials("ariaSelect", { name: m.name })}
               >
                 <Image
                   src={m.swatch}

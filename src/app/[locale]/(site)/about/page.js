@@ -1,116 +1,39 @@
-// src/app/about/page.js
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { Separator } from "@/components/ui/separator";
 import AboutMotion from "@/components/animations/AboutMotion";
+import { getTranslations } from "next-intl/server";
 
-export const metadata = { title: "About — AIL Studio" };
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "about" });
+  return { title: t("metadataTitle") };
+}
 
-// Data (tetap sama)
-const directors = [
-  {
-    name: "A. Wirawan",
-    role: "Principal Architect",
-    img: "https://images.unsplash.com/photo-1620668233692-c83e9563f337?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774",
-    bio: "Leads architectural vision with emphasis on disciplined proportion, daylight, and serviceable details.",
-  },
-  {
-    name: "N. Prameswari",
-    role: "Design Director, Interiors",
-    img: "https://images.unsplash.com/photo-1738739907559-8998f9e6e626?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774",
-    bio: "Orchestrates interior palettes and joinery systems—warm tactility, calm tonality, and enduring comfort.",
-  },
-];
+export default async function AboutPage({ params }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "about" });
 
-const pillars = [
-  {
-    title: "Proportion First",
-    text: "We draw from classical orders and modern constraints. Each room balanced before embellishment.",
-  },
-  {
-    title: "Material Honesty",
-    text: "Stone feels like stone; timber like timber. Finishes are chosen for aging gracefully.",
-  },
-  {
-    title: "Light as a Material",
-    text: "Daylight is shaped, not added. Shadow gives measure—contrast remains measured.",
-  },
-  {
-    title: "Quiet Utility",
-    text: "Details disappear into function. Comfort and service access are designed, not appended.",
-  },
-];
+  const hero = t.raw("hero");
+  const manifesto = t.raw("manifesto");
+  const directors = t.raw("directors.items");
+  const directorsTitle = t("directors.title");
+  const directorsSubtitle = t("directors.subtitle");
+  const pillars = t.raw("pillars.items");
+  const pillarsTitle = t("pillars.title");
+  const approach = t.raw("approach");
+  const accolades = t.raw("accolades");
+  const publications = t.raw("publications");
+  const clients = t.raw("clients.items");
+  const clientsTitle = t("clients.title");
+  const timeline = t.raw("timeline");
+  const quote = t.raw("quote");
+  const cta = t.raw("cta");
 
-const process = [
-  {
-    k: "01",
-    title: "Discovery & Brief",
-    text: "Programme mapping, priorities, budget, and schedule alignment.",
-  },
-  {
-    k: "02",
-    title: "Concept & Proportion",
-    text: "Massing, plan studies, light strategy, palette direction.",
-  },
-  {
-    k: "03",
-    title: "Design Development",
-    text: "Joinery, material layers, envelope performance, coordination.",
-  },
-  {
-    k: "04",
-    title: "Documentation",
-    text: "Tender packs, specifications, cost reviews.",
-  },
-  {
-    k: "05",
-    title: "Delivery & Tuning",
-    text: "Site review, commissioning, post-occupancy fine-tuning.",
-  },
-];
+  const gallery = t.raw("gallery");
+  const [heroPanel, entryPanel, deskPanel, materialsPanel, meetingPanel] =
+    gallery.items;
 
-const timeline = [
-  { year: "2019", text: "Studio founded; first residential commissions." },
-  { year: "2021", text: "Regional hospitality & commercial projects." },
-  { year: "2023", text: "Press features and award shortlistings." },
-  { year: "2025", text: "Lifecycle-driven specifications institutionalized." },
-];
-
-const press = [
-  {
-    logo: "https://images.unsplash.com/photo-1596079890687-58c51d24889a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774https://images.unsplash.com/photo-1596079890687-58c51d24889a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774",
-    name: "Anthology",
-    href: "#",
-  },
-  {
-    logo: "https://images.unsplash.com/photo-1664711942326-2c3351e215e6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1634",
-    name: "Frame",
-    href: "#",
-  },
-  {
-    logo: "https://images.unsplash.com/photo-1637787687868-620915e3b4b5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1160",
-    name: "Dezeen",
-    href: "#",
-  },
-  {
-    logo: "https://images.unsplash.com/photo-1654511043142-3785f5e4c8e9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870",
-    name: "Wallpaper*",
-    href: "#",
-  },
-];
-
-const clients = [
-  "Aman Group",
-  "Tokopedia",
-  "UOB",
-  "Sequis",
-  "Sinar Mas",
-  "Artotel",
-  "Unilever",
-  "BCA",
-];
-
-export default function AboutPage() {
   return (
     <>
       {/* HERO — Portrait editorial */}
@@ -120,8 +43,11 @@ export default function AboutPage() {
       >
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0"
-            alt="Studio portrait"
+            src={
+              hero.image ??
+              "https://images.unsplash.com/photo-1616594039964-ae9021a400a0"
+            }
+            alt={hero.imageAlt}
             fill
             className="about-hero-img object-cover"
             sizes="100vw"
@@ -157,20 +83,19 @@ export default function AboutPage() {
             className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/60 backdrop-blur-[2px] px-3 py-1 text-xs text-muted-foreground"
             data-reveal-up
           >
-            About AIL Studio
+            {hero.eyebrow}
           </div>
           <h1
             className="mt-3 text-3xl md:text-5xl font-semibold tracking-tight max-w-3xl"
             data-reveal-up
           >
-            A practice devoted to proportion, material, and light.
+            {hero.title}
           </h1>
           <p
             className="mt-3 text-sm md:text-base text-muted-foreground max-w-2xl"
             data-reveal-up
           >
-            We work with restraint—designing calm, enduring spaces tailored to
-            everyday life.
+            {hero.description}
           </p>
         </div>
       </section>
@@ -180,18 +105,17 @@ export default function AboutPage() {
         <div className="rounded-2xl border border-border/70 p-6 md:p-8">
           <div className="grid md:grid-cols-[1fr_420px] gap-8 items-start">
             <div className="space-y-4" data-stagger>
-              <h2 className="text-2xl md:text-3xl font-semibold">Manifesto</h2>
-              <p className="text-sm text-muted-foreground max-w-prose">
-                We value discipline over spectacle. Rooms that feel inevitable;
-                details that prefer to be felt rather than seen. Materials are
-                chosen to wear softly, light is shaped to be generous, and
-                spatial order is tuned to daily rituals.
-              </p>
-              <p className="text-sm text-muted-foreground max-w-prose">
-                We are rigorous about serviceability—access panels, cleaning
-                edges, and replacement logic are embedded from the start. Luxury
-                is quiet when it truly supports living.
-              </p>
+              <h2 className="text-2xl md:text-3xl font-semibold">
+                {manifesto.title}
+              </h2>
+              {manifesto.paragraphs?.map((paragraph) => (
+                <p
+                  key={paragraph}
+                  className="text-sm text-muted-foreground max-w-prose"
+                >
+                  {paragraph}
+                </p>
+              ))}
             </div>
 
             <figure
@@ -199,8 +123,10 @@ export default function AboutPage() {
               data-parallax-y="-8"
             >
               <Image
-                src="https://images.unsplash.com/photo-1693578616322-c8abe6c7393d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740"
-                alt="Atelier desk"
+                src={
+                  manifesto.image ?? "https://images.unsplash.com/photo-1693578616322-c8abe6c7393d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740"
+                }
+                alt={manifesto.imageAlt}
                 fill
                 className="object-cover"
                 sizes="(min-width:1024px) 40vw, 100vw"
@@ -217,10 +143,10 @@ export default function AboutPage() {
       <section className="mx-auto max-w-7xl px-6 py-14">
         <div className="mb-6">
           <h2 className="text-2xl md:text-3xl font-semibold" data-reveal-up>
-            Directors
+            {directorsTitle}
           </h2>
           <p className="text-sm text-muted-foreground" data-reveal-up>
-            Senior oversight on every project.
+            {directorsSubtitle}
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-6" data-stagger>
@@ -254,12 +180,14 @@ export default function AboutPage() {
       {/* PHILOSOPHY PILLARS */}
       <section className="mx-auto max-w-7xl px-6 py-6" data-reveal-up>
         <div className="rounded-2xl border border-border/70 p-6 md:p-8">
-          <h2 className="text-2xl md:text-3xl font-semibold">Philosophy</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold">{pillarsTitle}</h2>
           <div className="mt-6 grid md:grid-cols-4 gap-6" data-stagger>
             {pillars.map((p) => (
               <div key={p.title} className="space-y-2">
                 <h3 className="font-medium">{p.title}</h3>
-                <p className="text-sm text-muted-foreground">{p.text}</p>
+                <p className="text-sm text-muted-foreground">
+                  {p.description}
+                </p>
               </div>
             ))}
           </div>
@@ -270,19 +198,20 @@ export default function AboutPage() {
       <section className="mx-auto max-w-7xl px-6 py-14">
         <div className="mb-6">
           <h2 className="text-2xl md:text-3xl font-semibold" data-reveal-up>
-            Approach
+            {approach.title}
           </h2>
           <p className="text-sm text-muted-foreground max-w-2xl" data-reveal-up>
-            From discovery to post-occupancy tuning, we keep one clear thread:
-            proportion, material, and light aligned with daily use.
+            {approach.description}
           </p>
         </div>
         <div className="grid md:grid-cols-5 gap-4" data-stagger>
-          {process.map((s) => (
-            <div key={s.k} className="rounded-2xl border border-border/70 p-4">
-              <div className="text-xs text-muted-foreground">{s.k}</div>
+          {approach.steps?.map((s) => (
+            <div key={s.key} className="rounded-2xl border border-border/70 p-4">
+              <div className="text-xs text-muted-foreground">{s.key}</div>
               <h3 className="mt-1 font-medium">{s.title}</h3>
-              <p className="mt-1 text-sm text-muted-foreground">{s.text}</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                {s.description}
+              </p>
             </div>
           ))}
         </div>
@@ -293,31 +222,30 @@ export default function AboutPage() {
         <div className="rounded-2xl border border-border/70 p-6 md:p-8">
           <div className="grid md:grid-cols-2 gap-6">
             <div data-stagger>
-              <h2 className="text-2xl md:text-3xl font-semibold">Accolades</h2>
+              <h2 className="text-2xl md:text-3xl font-semibold">
+                {accolades.title}
+              </h2>
               <ul className="mt-4 grid gap-3">
-                <li className="flex items-center justify-between rounded-xl border border-border/60 px-3 py-2 text-sm">
-                  <span className="text-muted-foreground">
-                    Regional Design Awards
-                  </span>
-                  <span className="font-medium">Shortlist 2023</span>
-                </li>
-                <li className="flex items-center justify-between rounded-xl border border-border/60 px-3 py-2 text-sm">
-                  <span className="text-muted-foreground">
-                    Interior Craft Awards
-                  </span>
-                  <span className="font-medium">Nominee 2024</span>
-                </li>
+                {accolades.items?.map((item) => (
+                  <li
+                    key={item.label}
+                    className="flex items-center justify-between rounded-xl border border-border/60 px-3 py-2 text-sm"
+                  >
+                    <span className="text-muted-foreground">{item.label}</span>
+                    <span className="font-medium">{item.value}</span>
+                  </li>
+                ))}
               </ul>
             </div>
             <div>
               <h2 className="text-2xl md:text-3xl font-semibold" data-reveal-up>
-                Publications
+                {publications.title}
               </h2>
               <div
                 className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4"
                 data-stagger
               >
-                {press.map((p) => (
+                {publications.items?.map((p) => (
                   <Link
                     key={p.name}
                     href={p.href}
@@ -356,7 +284,7 @@ export default function AboutPage() {
       {/* CLIENTS STRIP */}
       <section className="mx-auto max-w-7xl px-6 py-14" data-reveal-up>
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-          Selected Clients
+          {clientsTitle}
         </h2>
         <div className="rounded-2xl border border-border/70 p-4">
           <div className="flex flex-wrap gap-2" data-stagger>
@@ -375,11 +303,13 @@ export default function AboutPage() {
       {/* TIMELINE (CONDENSED) */}
       <section className="mx-auto max-w-7xl px-6 py-6" data-reveal-up>
         <div className="rounded-2xl border border-border/70 p-6">
-          <h2 className="text-2xl md:text-3xl font-semibold">Timeline</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold">
+            {timeline.title}
+          </h2>
           <div className="mt-4 relative">
             <div className="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-border/80" />
             <div className="space-y-8" data-stagger>
-              {timeline.map((t, i) => (
+              {timeline.items?.map((t, i) => (
                 <div
                   key={t.year}
                   className={`relative grid md:grid-cols-2 gap-6 ${
@@ -409,11 +339,10 @@ export default function AboutPage() {
       <section className="mx-auto max-w-7xl px-6 py-14" data-parallax-y="-6">
         <figure className="rounded-2xl border border-border/70 p-8 md:p-12 bg-background">
           <blockquote className="text-xl md:text-2xl leading-relaxed">
-            &quot;AIL delivered a home that is both quiet and deeply functional.
-            The craft holds up to daily life.&quot;
+            {quote.text}
           </blockquote>
           <figcaption className="mt-4 text-sm text-muted-foreground">
-            Client — Private Residence, 2024
+            {quote.attribution}
           </figcaption>
         </figure>
       </section>
@@ -433,31 +362,118 @@ export default function AboutPage() {
           </div>
           <div className="relative p-8 md:p-12 max-w-2xl">
             <h2 className="text-2xl md:text-3xl font-semibold">
-              Start a Project
+              {cta.title}
             </h2>
             <p className="text-sm text-muted-foreground mt-2">
-              Share your brief and timeline—we will respond with an initial read
-              and scope.
+              {cta.description}
             </p>
             <div className="mt-6 flex gap-3">
               <Link
                 href="/contact"
                 className="rounded-xl border border-border/70 px-4 py-2 text-sm hover:border-border"
               >
-                Contact Form
+                {cta.contactLabel}
               </Link>
               <Link
-                href="mailto:studio@example.com?subject=Project%20Enquiry%20—%20AIL%20Studio"
+                href={`mailto:studio@example.com?subject=${encodeURIComponent(cta.emailSubject)}`}
                 className="rounded-xl border border-border/70 px-4 py-2 text-sm hover:border-border"
               >
-                Email Studio
+                {cta.emailLabel}
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mount animations */}
+      {/* Gallery */}
+      <section className="mx-auto max-w-7xl px-6 py-14">
+        <div className="mb-6 flex items-end justify-between">
+          <h2 className="text-2xl md:text-3xl font-semibold">
+            {gallery.title}
+          </h2>
+          <span className="text-xs text-muted-foreground">
+            {gallery.locations}
+          </span>
+        </div>
+
+        <div className="grid grid-cols-12 gap-4">
+          <figure className="relative col-span-12 rounded-2xl overflow-hidden border border-border/70 aspect-[21/9]">
+            <Image
+              src={heroPanel.src}
+              alt={heroPanel.title}
+              fill
+              className="object-cover"
+              sizes="(min-width:1280px) 90vw, 100vw"
+              data-lightbox="true"
+            />
+            <figcaption className="absolute left-4 right-4 bottom-3 flex items-center justify-between">
+              <div className="backdrop-blur-[2px] bg-background/40 border border-border/60 rounded-full px-3 py-1">
+                <span className="text-xs">{heroPanel.title}</span>
+              </div>
+              <span className="text-xs text-muted-foreground">
+                {heroPanel.meta}
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure className="relative col-span-12 md:col-span-5 xl:col-span-4 aspect-[3/4] rounded-2xl overflow-hidden border border-border/70">
+            <Image
+              src={entryPanel.src}
+              alt={entryPanel.title}
+              fill
+              className="object-cover"
+              sizes="(min-width:1280px) 33vw, (min-width:768px) 40vw, 100vw"
+              data-lightbox="true"
+            />
+            <figcaption className="absolute left-3 bottom-3 rounded-full border border-border/60 bg-background/40 backdrop-blur px-3 py-1 text-xs">
+              {entryPanel.title}
+            </figcaption>
+          </figure>
+
+          <figure className="relative col-span-12 md:col-span-7 xl:col-span-8 aspect-[16/10] rounded-2xl overflow-hidden border border-border/70">
+            <Image
+              src={deskPanel.src}
+              alt={deskPanel.title}
+              fill
+              className="object-cover"
+              sizes="(min-width:1280px) 58vw, (min-width:768px) 60vw, 100vw"
+              data-lightbox="true"
+            />
+            <figcaption className="absolute right-3 bottom-3 rounded-full border border-border/60 bg-background/40 backdrop-blur px-3 py-1 text-xs">
+              {deskPanel.title}
+            </figcaption>
+          </figure>
+
+          <figure className="relative col-span-12 md:col-span-6 aspect-[16/10] rounded-2xl overflow-hidden border border-border/70">
+            <Image
+              src={materialsPanel.src}
+              alt={materialsPanel.title}
+              fill
+              className="object-cover"
+              sizes="(min-width:768px) 50vw, 100vw"
+              data-lightbox="true"
+            />
+            <figcaption className="absolute left-3 bottom-3 rounded-full border border-border/60 bg-background/40 backdrop-blur px-3 py-1 text-xs">
+              {materialsPanel.title}
+            </figcaption>
+          </figure>
+
+          <figure className="relative col-span-12 md:col-span-6 aspect-[3/4] md:aspect-[16/10] rounded-2xl overflow-hidden border border-border/70">
+            <Image
+              src={meetingPanel.src}
+              alt={meetingPanel.title}
+              fill
+              className="object-cover"
+              sizes="(min-width:768px) 50vw, 100vw"
+              data-lightbox="true"
+            />
+            <figcaption className="absolute right-3 bottom-3 rounded-full border border-border/60 bg-background/40 backdrop-blur px-3 py-1 text-xs">
+              {meetingPanel.title}
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       <AboutMotion />
     </>
   );

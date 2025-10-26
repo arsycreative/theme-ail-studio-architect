@@ -1,18 +1,20 @@
 "use client";
 
-import Link from "next/link";
+import { Link, usePathname } from "@/i18n/routing";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Moon, Sun, Menu, X } from "lucide-react";
+import { useTranslations } from "next-intl";
+
+import LocaleSwitcher from "./LocaleSwitcher";
 
 const NAV_LINKS = [
-  { href: "/projects", label: "Projects" },
-  { href: "/studio", label: "Studio" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/projects", key: "projects" },
+  { href: "/studio", key: "studio" },
+  { href: "/about", key: "about" },
+  { href: "/contact", key: "contact" },
 ];
 
 export default function MainNav() {
@@ -20,6 +22,9 @@ export default function MainNav() {
   const [mounted, setMounted] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
+  const tCommon = useTranslations("common");
+  const tNav = useTranslations("nav.links");
+  const tLanguage = useTranslations("nav.language");
 
   useEffect(() => setMounted(true), []);
   useEffect(() => {
@@ -32,7 +37,7 @@ export default function MainNav() {
         variant="ghost"
         size="icon"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        aria-label="Toggle theme"
+        aria-label={tCommon("aria.toggleTheme")}
         className="rounded-full"
       >
         {theme === "dark" ? (
@@ -47,7 +52,7 @@ export default function MainNav() {
     <header className="fixed inset-x-0 top-0 z-40 border-b border-border/60 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <Link href="/" className="font-semibold tracking-wide">
-          AIL Studio
+          {tCommon("brand")}
         </Link>
 
         {/* Desktop nav */}
@@ -58,11 +63,12 @@ export default function MainNav() {
               href={link.href}
               className="transition hover:opacity-80"
             >
-              {link.label}
+              {tNav(link.key)}
             </Link>
           ))}
 
           <Separator orientation="vertical" className="h-6" />
+          <LocaleSwitcher />
 
           <ToggleThemeButton />
         </nav>
@@ -71,7 +77,7 @@ export default function MainNav() {
         <button
           type="button"
           className="inline-flex items-center justify-center rounded-full border border-border/60 bg-background/80 p-2.5 text-sm transition hover:bg-background md:hidden"
-          aria-label="Toggle navigation"
+          aria-label={tCommon("aria.toggleNavigation")}
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((prev) => !prev)}
         >
@@ -99,7 +105,7 @@ export default function MainNav() {
                 href={link.href}
                 className="flex items-center justify-between rounded-xl border border-border/60 px-4 py-3 transition hover:border-border"
               >
-                <span>{link.label}</span>
+                <span>{tNav(link.key)}</span>
                 <span className="text-xs text-muted-foreground" aria-hidden>
                   →
                 </span>
@@ -107,9 +113,15 @@ export default function MainNav() {
             ))}
           </nav>
 
-          <div className="flex items-center justify-between rounded-xl border border-border/60 px-4 py-3">
-            <span className="text-sm">Theme</span>
-            <ToggleThemeButton />
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center justify-between rounded-xl border border-border/60 px-4 py-3">
+              <span className="text-sm">{tCommon("theme")}</span>
+              <ToggleThemeButton />
+            </div>
+            <div className="flex items-center justify-between rounded-xl border border-border/60 px-4 py-3">
+              <span className="text-sm">{tLanguage("label")}</span>
+              <LocaleSwitcher />
+            </div>
           </div>
         </div>
       </div>

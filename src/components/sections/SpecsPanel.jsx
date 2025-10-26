@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import {
   Collapsible,
   CollapsibleContent,
@@ -8,6 +9,8 @@ import {
 
 export default function SpecsPanel({ specs = [] }) {
   const [open, setOpen] = useState(false);
+  const tCase = useTranslations("home.caseStudy");
+  const tSpecs = useTranslations("home.caseStudy.specs");
 
   if (!specs?.length) return null;
 
@@ -19,12 +22,12 @@ export default function SpecsPanel({ specs = [] }) {
     >
       <div className="p-5 md:p-6">
         <div className="flex items-center justify-between">
-          <h2 className="font-medium">Specifications</h2>
+          <h2 className="font-medium">{tCase("specsTitle")}</h2>
           <CollapsibleTrigger
             className="text-sm underline underline-offset-4"
-            aria-label={open ? "Hide specifications" : "Show specifications"}
+            aria-label={open ? tSpecs("ariaHide") : tSpecs("ariaShow")}
           >
-            {open ? "Hide" : "Show"}
+            {open ? tSpecs("toggleHide") : tSpecs("toggleShow")}
           </CollapsibleTrigger>
         </div>
 

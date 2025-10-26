@@ -1,13 +1,17 @@
 "use client";
-import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { gsap } from "@/lib/gsap";
 import { Badge } from "@/components/ui/badge";
-import { posts } from "@/lib/data";
+import { getPosts } from "@/lib/data";
+import { Link } from "@/i18n/routing";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function JournalTeaser() {
   const ref = useRef(null);
+  const locale = useLocale();
+  const posts = getPosts(locale);
+  const tJournal = useTranslations("home.journalTeaser");
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -33,14 +37,14 @@ export default function JournalTeaser() {
       <div className="mb-8 flex items-end justify-between">
         <div>
           <h2 className="text-2xl md:text-3xl font-semibold">
-            Journal / Insights
+            {tJournal("title")}
           </h2>
           <p className="text-muted-foreground mt-2 max-w-2xl">
-            Notes on proportion, materiality, and light from studio practice.
+            {tJournal("description")}
           </p>
         </div>
         <Link href="/about" className="text-sm underline underline-offset-4">
-          About the studio
+          {tJournal("ctaAbout")}
         </Link>
       </div>
 
@@ -65,7 +69,7 @@ export default function JournalTeaser() {
               <h3 className="font-medium">{p.title}</h3>
               <p className="text-sm text-muted-foreground">{p.excerpt}</p>
               <Link href={`/`} className="text-sm underline underline-offset-4">
-                Read
+                {tJournal("ctaRead")}
               </Link>
             </div>
           </article>

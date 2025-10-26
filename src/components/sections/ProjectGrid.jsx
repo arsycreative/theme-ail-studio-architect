@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { gsap, ScrollTrigger, Flip } from "@/lib/gsap";
@@ -11,13 +10,19 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { projects } from "@/lib/data";
+import { Link } from "@/i18n/routing";
+import { getProjects } from "@/lib/data";
 import ProjectMediaCarousel from "./ProjectMediaCarousel";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function ProjectGrid() {
   const ref = useRef(null);
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState(null);
+  const locale = useLocale();
+  const projectList = getProjects(locale);
+  const tCommon = useTranslations("common");
+  const tProjectGrid = useTranslations("home.projectGrid");
 
   // reveal on scroll
   useEffect(() => {
@@ -59,18 +64,18 @@ export default function ProjectGrid() {
     <section ref={ref} className="mx-auto max-w-7xl px-6 py-20">
       <div className="flex items-end justify-between mb-8">
         <h2 className="text-2xl md:text-3xl font-semibold">
-          Selected Projects
+          {tProjectGrid("title")}
         </h2>
         <Link
           href="/projects"
           className="text-sm underline-offset-4 hover:underline"
         >
-          View all
+          {tCommon("cta.viewAll")}
         </Link>
       </div>
 
       <div className="grid md:grid-cols-3 gap-6">
-        {projects.map((p) => (
+        {projectList.map((p) => (
           <div
             key={p.slug}
             className="project-card group relative rounded-2xl overflow-hidden border border-border/70"
@@ -99,9 +104,9 @@ export default function ProjectGrid() {
                   variant="secondary"
                   className="rounded-lg"
                   onClick={() => onOpen(p)}
-                  data-cursor="Quick View"
+                  data-cursor={tCommon("cta.quickView")}
                 >
-                  Quick View
+                  {tCommon("cta.quickView")}
                 </Button>
               </div>
             </div>
@@ -172,8 +177,7 @@ export default function ProjectGrid() {
                 </DialogDescription>
 
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  A calm spatial narrative with precise details and enduring
-                  materials.
+                  {tProjectGrid("dialogDescription")}
                 </p>
 
                 <div className="flex flex-wrap gap-2 pt-2">
@@ -188,17 +192,17 @@ export default function ProjectGrid() {
                   <Link
                     href={`/case-studies/${current.slug}`}
                     className="underline underline-offset-4"
-                    data-cursor="View"
+                    data-cursor={tCommon("cta.openCaseStudy")}
                   >
-                    Open Case Study
+                    {tCommon("cta.openCaseStudy")}
                   </Link>
                   <span className="text-muted-foreground">/</span>
                   <Link
                     href="/contact"
                     className="underline underline-offset-4"
-                    data-cursor="View"
+                    data-cursor={tCommon("cta.contact")}
                   >
-                    Start a Project
+                    {tCommon("cta.startProject")}
                   </Link>
                 </div>
               </div>

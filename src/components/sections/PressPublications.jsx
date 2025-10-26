@@ -1,32 +1,13 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
+import { useTranslations } from "next-intl";
 import { gsap } from "@/lib/gsap";
-
-const items = [
-  {
-    name: "Dezeen",
-    year: "2025",
-    title: "Urban Calm: Brass & Travertine Apartment",
-  },
-  {
-    name: "ArchDaily",
-    year: "2024",
-    title: "Lumière Residence: A Dialogue with Light",
-  },
-  {
-    name: "Wallpaper*",
-    year: "2024",
-    title: "Quiet Luxury: Material Honesty at Home",
-  },
-  {
-    name: "DesignBoom",
-    year: "2023",
-    title: "Crafted Joinery in Minimal Interiors",
-  },
-];
 
 export default function PressPublications() {
   const ref = useRef(null);
+  const tPress = useTranslations("home.pressPublications");
+  const items = useMemo(() => tPress.raw("items") ?? [], [tPress]);
+  const title = tPress("title");
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -43,9 +24,7 @@ export default function PressPublications() {
 
   return (
     <section ref={ref} className="mx-auto max-w-7xl px-6 py-16">
-      <h2 className="text-2xl md:text-3xl font-semibold mb-6">
-        Press / Publications
-      </h2>
+      <h2 className="text-2xl md:text-3xl font-semibold mb-6">{title}</h2>
       <div className="rounded-2xl border border-border/70 divide-y divide-border/70 overflow-hidden">
         {items.map((it) => (
           <div

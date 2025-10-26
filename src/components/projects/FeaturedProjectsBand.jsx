@@ -1,11 +1,13 @@
 "use client";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { gsap } from "@/lib/gsap";
+import { useTranslations } from "next-intl";
 
 export default function FeaturedProjectsBand({ items = [] }) {
   const ref = useRef(null);
+  const tCursor = useTranslations("common.cursor");
 
   useEffect(() => {
     const el = ref.current;
@@ -54,6 +56,7 @@ export default function FeaturedProjectsBand({ items = [] }) {
                 <Link
                   href={`/case-studies/${a.slug}`}
                   className="underline-offset-4 hover:underline"
+                  data-cursor={tCursor("view")}
                 >
                   {a.title}
                 </Link>
@@ -85,6 +88,7 @@ export default function FeaturedProjectsBand({ items = [] }) {
                   <Link
                     href={`/case-studies/${b.slug}`}
                     className="underline-offset-4 hover:underline"
+                    data-cursor={tCursor("view")}
                   >
                     {b.title}
                   </Link>
@@ -114,6 +118,7 @@ export default function FeaturedProjectsBand({ items = [] }) {
                   <Link
                     href={`/case-studies/${c.slug}`}
                     className="underline-offset-4 hover:underline"
+                    data-cursor={tCursor("view")}
                   >
                     {c.title}
                   </Link>

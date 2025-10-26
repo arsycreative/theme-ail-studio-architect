@@ -2,12 +2,18 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
   const ref = useRef(null);
   const tlRef = useRef(null);
   const [active, setActive] = useState(0);
+  const tHero = useTranslations("hero");
+  const tCommon = useTranslations("common");
 
+  const headingLines = tHero.raw("heading");
+  const tagPills = tHero.raw("tags");
+  console.log(tHero.raw("heading"));
   const frames = [
     "/hero-frame-1.webp",
     "/hero-frame-2.webp",
@@ -163,7 +169,7 @@ export default function Hero() {
             key={src}
             className="hero-image hero-frame absolute inset-0 object-cover will-change-transform"
             src={src}
-            alt="Editorial interior"
+            alt={tHero("alt")}
             fill
             sizes="100vw"
             priority={i === 0}
@@ -208,36 +214,33 @@ export default function Hero() {
         />
 
         <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 backdrop-blur-[2px] px-3 py-1 text-xs text-muted-foreground">
-          Architecture • Interiors • Living
+          {tHero("badge")}
         </div>
 
         <h1 className="tracking-tight font-semibold leading-[1.04] text-foreground">
-          <span className="hero-line block text-4xl md:text-6xl drop-shadow-[0_1px_0.5px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_1px_0.5px_rgba(0,0,0,0.6)]">
-            Bespoke architecture
-          </span>
-          <span className="hero-line block text-4xl md:text-6xl drop-shadow-[0_1px_0.5px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_1px_0.5px_rgba(0,0,0,0.6)]">
-            and interiors for
-          </span>
-          <span className="hero-line block text-4xl md:text-6xl drop-shadow-[0_1px_0.5px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_1px_0.5px_rgba(0,0,0,0.6)]">
-            remarkable living.
-          </span>
+          {headingLines.map((line, index) => (
+            <span
+              key={line}
+              className="hero-line block text-4xl md:text-6xl drop-shadow-[0_1px_0.5px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_1px_0.5px_rgba(0,0,0,0.6)]"
+            >
+              {line}
+            </span>
+          ))}
         </h1>
 
         <p className="hero-sub mt-4 text-base md:text-lg text-muted-foreground max-w-2xl drop-shadow-[0_1px_0.5px_rgba(0,0,0,0.25)] dark:drop-shadow-[0_1px_0.5px_rgba(0,0,0,0.45)]">
-          We craft calm, enduring spaces with quiet luxury, disciplined
-          proportions, and tactile materiality.
+          {tHero("description")}
         </p>
 
         <div className="mt-6 flex flex-wrap gap-2 text-xs">
-          <span className="rounded-full border border-border/70 bg-background/70 px-3 py-1">
-            Residential & Hospitality
-          </span>
-          <span className="rounded-full border border-border/70 bg-background/70 px-3 py-1">
-            Full-service Design
-          </span>
-          <span className="rounded-full border border-border/70 bg-background/70 px-3 py-1">
-            SEA & Beyond
-          </span>
+          {tagPills.map((label) => (
+            <span
+              key={label}
+              className="rounded-full border border-border/70 bg-background/70 px-3 py-1"
+            >
+              {label}
+            </span>
+          ))}
         </div>
       </div>
 
@@ -247,7 +250,7 @@ export default function Hero() {
           <button
             key={i}
             onClick={() => jumpTo(i)}
-            aria-label={`Go to frame ${i + 1}`}
+            aria-label={tCommon("aria.goToFrame", { index: i + 1 })}
             aria-current={active === i ? "true" : "false"}
             className={`h-2.5 w-2.5 rounded-full border transition ${
               active === i
@@ -261,7 +264,9 @@ export default function Hero() {
       {/* Scroll cue */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-muted-foreground/90">
         <div className="flex flex-col items-center gap-2">
-          <div className="text-[10px] tracking-[0.2em] uppercase">Scroll</div>
+          <div className="text-[10px] tracking-[0.2em] uppercase">
+            {tHero("scroll")}
+          </div>
           <svg
             width="18"
             height="18"

@@ -1,43 +1,18 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
+import { useTranslations } from "next-intl";
 import { gsap } from "@/lib/gsap";
-
-const items = [
-  {
-    src: "/cinematic-1.webp",
-    title: "Material & Light",
-    meta: "Travertine edge study",
-    ratio: "landscape",
-  },
-  {
-    src: "/cinematic-2.webp",
-    title: "Joinery Detail",
-    meta: "Brass & oak junction",
-    ratio: "portrait",
-  },
-  {
-    src: "/cinematic-3.webp",
-    title: "Circulation",
-    meta: "Soft reveal across planes",
-    ratio: "landscape",
-  },
-  {
-    src: "/cinematic-4.webp",
-    title: "Quiet Corner",
-    meta: "Tone-on-tone palette",
-    ratio: "portrait",
-  },
-  {
-    src: "/cinematic-5.webp",
-    title: "Salon",
-    meta: "Diffuse daylight",
-    ratio: "landscape",
-  },
-];
 
 export default function CinematicStrip() {
   const ref = useRef(null);
+  const tStrip = useTranslations("home.cinematicStrip");
+  const items = useMemo(
+    () => tStrip.raw("items") ?? [],
+    [tStrip]
+  );
+  const title = tStrip("title");
+  const description = tStrip("description");
 
   useEffect(() => {
     const el = ref.current;
@@ -101,10 +76,8 @@ export default function CinematicStrip() {
   return (
     <section ref={ref} className="mx-auto max-w-7xl px-6 py-20">
       <header className="mb-8">
-        <h2 className="text-2xl md:text-3xl font-semibold">Cinematic Study</h2>
-        <p className="text-sm text-muted-foreground">
-          Material, light, and proportion across selected frames.
-        </p>
+        <h2 className="text-2xl md:text-3xl font-semibold">{title}</h2>
+        <p className="text-sm text-muted-foreground">{description}</p>
       </header>
 
       <div className="grid grid-cols-12 gap-4">

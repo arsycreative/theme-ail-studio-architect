@@ -1,7 +1,9 @@
 "use client";
 import { useMemo } from "react";
+import { useTranslations } from "next-intl";
 
 export default function ProjectStats({ items = [] }) {
+  const tStats = useTranslations("home.projectsPage.stats");
   const stats = useMemo(() => {
     const total = items.length;
     const years = items.map((p) => p.year).filter(Boolean);
@@ -26,20 +28,20 @@ export default function ProjectStats({ items = [] }) {
     <section className="mx-auto max-w-7xl px-6 pt-8">
       <div className="grid md:grid-cols-3 gap-4">
         <div className="rounded-2xl border border-border/70 p-5">
-          <div className="text-sm text-muted-foreground">Total Projects</div>
+          <div className="text-sm text-muted-foreground">{tStats("total")}</div>
           <div className="text-2xl md:text-3xl font-semibold mt-1">
             {stats.total}
           </div>
         </div>
         <div className="rounded-2xl border border-border/70 p-5">
-          <div className="text-sm text-muted-foreground">Active Years</div>
+          <div className="text-sm text-muted-foreground">{tStats("years")}</div>
           <div className="text-2xl md:text-3xl font-semibold mt-1">
             {stats.span}
           </div>
         </div>
         <div className="rounded-2xl border border-border/70 p-5">
           <div className="text-sm text-muted-foreground">
-            Most Frequent Category
+            {tStats("popular")}
           </div>
           <div className="text-xl md:text-2xl font-medium mt-1">
             {stats.popular}

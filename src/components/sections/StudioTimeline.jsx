@@ -1,32 +1,16 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
+import { useTranslations } from "next-intl";
 import { gsap } from "@/lib/gsap";
-
-const milestones = [
-  {
-    year: "2019",
-    title: "Studio Founded",
-    text: "Initial practice focusing on residential interiors.",
-  },
-  {
-    year: "2021",
-    title: "Regional Commission",
-    text: "Expanded work to commercial spaces across SEA.",
-  },
-  {
-    year: "2023",
-    title: "Award Recognition",
-    text: "Selected in design awards for crafted joinery.",
-  },
-  {
-    year: "2025",
-    title: "Sustainable Initiative",
-    text: "Material lifecycle & passive strategies refined.",
-  },
-];
 
 export default function StudioTimeline() {
   const ref = useRef(null);
+  const tTimeline = useTranslations("home.studioTimeline");
+  const milestones = useMemo(
+    () => tTimeline.raw("milestones") ?? [],
+    [tTimeline]
+  );
+  const title = tTimeline("title");
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -50,9 +34,7 @@ export default function StudioTimeline() {
 
   return (
     <section ref={ref} className="mx-auto max-w-7xl px-6 py-16">
-      <h2 className="text-2xl md:text-3xl font-semibold mb-8">
-        Studio Timeline
-      </h2>
+      <h2 className="text-2xl md:text-3xl font-semibold mb-8">{title}</h2>
       <div className="relative">
         <div
           className="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-border/80"

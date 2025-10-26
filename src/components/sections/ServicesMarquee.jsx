@@ -1,18 +1,15 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
+import { useTranslations } from "next-intl";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
-
-const items = [
-  "Architecture",
-  "Interior Design",
-  "Furniture",
-  "Landscape",
-  "Lighting",
-  "Art Curation",
-];
 
 export default function ServicesMarquee() {
   const ref = useRef(null);
+  const tServices = useTranslations("home.servicesMarquee");
+  const items = useMemo(
+    () => tServices.raw("items") ?? [],
+    [tServices]
+  );
 
   useEffect(() => {
     const ctx = gsap.context(() => {

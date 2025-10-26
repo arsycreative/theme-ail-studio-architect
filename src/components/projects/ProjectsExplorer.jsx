@@ -1,28 +1,38 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { projects } from "@/lib/data";
+import { useEffect, useMemo, useState } from "react";
+import { getProjects } from "@/lib/data";
 import ProjectsGallery from "@/components/projects/ProjectsGallery";
 
 // NEW
 import FeaturedProjectsBand from "@/components/projects/FeaturedProjectsBand";
 import ProjectStats from "@/components/projects/ProjectStats";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function ProjectsExplorer() {
-  const allTags = useMemo(() => {
-    const s = new Set();
-    projects.forEach((p) => p.tags?.forEach((t) => s.add(t)));
-    return Array.from(s);
-  }, []);
-
+  const locale = useLocale();
+  const tProjects = useTranslations("home.projectsPage");
+  const projectList = useMemo(() => getProjects(locale), [locale]);
   const [query, setQuery] = useState("");
-  const [tag, setTag] = useState("All");
+  const [tag, setTag] = useState("");
   const [sort, setSort] = useState("Newest");
   const [density, setDensity] = useState("Comfort");
+  const allLabel = tProjects("allTag");
+
+  useEffect(() => {
+    setTag(allLabel);
+  }, [allLabel]);
+
+  const allTags = useMemo(() => {
+    const s = new Set();
+    projectList.forEach((p) => p.tags?.forEach((t) => s.add(t)));
+    return Array.from(s);
+  }, [projectList]);
 
   const filtered = useMemo(() => {
-    let list = [...projects];
-    if (tag !== "All") list = list.filter((p) => p.tags?.includes(tag));
+    let list = [...projectList];
+    if (tag && tag !== allLabel)
+      list = list.filter((p) => p.tags?.includes(tag));
     if (query.trim()) {
       const q = query.toLowerCase();
       list = list.filter(
@@ -35,23 +45,31 @@ export default function ProjectsExplorer() {
     if (sort === "Newest") list.sort((a, b) => (b.year || 0) - (a.year || 0));
     if (sort === "Oldest") list.sort((a, b) => (a.year || 0) - (b.year || 0));
     return list;
-  }, [query, tag, sort]);
+  }, [projectList, query, tag, sort, allLabel]);
+
+  const summaryText =
+    tProjects("summary", {
+      count: filtered.length,
+      total: projectList.length,
+    }) +
+    (tag && tag !== allLabel ? tProjects("summaryTag", { tag }) : "") +
+    (query ? tProjects("summaryFiltered") : "");
 
   return (
     <>
       {/* Header */}
       <section className="mx-auto max-w-7xl px-6 pt-10">
         <h1 className="text-3xl md:text-4xl font-semibold mb-2" data-reveal-up>
-          Projects
+          {tProjects("title")}
         </h1>
         <p className="text-muted-foreground max-w-2xl" data-reveal-up>
-          A curation of residential and commercial works across regions.
+          {tProjects("description")}
         </p>
       </section>
 
       {/* NEW: highlight + kredibilitas + lokasi */}
-      <FeaturedProjectsBand items={projects.slice(0, 3)} />
-      <ProjectStats items={projects} />
+      <FeaturedProjectsBand items={projectList.slice(0, 3)} />
+      <ProjectStats items={projectList} />
 
       {/* Toolbar sticky */}
       <section className="sticky top-16 z-30 mx-auto max-w-7xl px-6 py-4">
@@ -60,13 +78,13 @@ export default function ProjectsExplorer() {
             {/* Search */}
             <div className="flex-1 min-w-[220px]">
               <label htmlFor="q" className="sr-only">
-                Search
+                {tProjects("searchLabel")}
               </label>
               <input
                 id="q"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search by title, tag, or location"
+                placeholder={tProjects("searchPlaceholder")}
                 className="w-full rounded-xl border border-border/70 bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
@@ -75,14 +93,14 @@ export default function ProjectsExplorer() {
             <div className="flex flex-wrap items-center gap-2">
               <button
                 type="button"
-                onClick={() => setTag("All")}
+                onClick={() => setTag(allLabel)}
                 className={`px-3 py-1.5 rounded-full border text-sm ${
-                  tag === "All"
+                  tag === allLabel
                     ? "border-foreground"
                     : "border-border/70 hover:border-border"
                 }`}
               >
-                All
+                {allLabel}
               </button>
               {allTags.map((t) => (
                 <button
@@ -102,10 +120,7 @@ export default function ProjectsExplorer() {
           </div>
 
           <div className="mt-3 text-xs text-muted-foreground">
-            Showing <span className="text-foreground">{filtered.length}</span>{" "}
-            of {projects.length} projects
-            {tag !== "All" ? ` • ${tag}` : ""}
-            {query ? " • filtered" : ""}
+            {summaryText}
           </div>
         </div>
       </section>

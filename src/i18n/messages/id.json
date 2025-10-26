@@ -1,0 +1,1136 @@
+{
+  "common": {
+    "brand": "AIL Studio",
+    "loading": "Memuat",
+    "theme": "Tema",
+    "cta": {
+      "viewAll": "Lihat semua",
+      "startProject": "Mulai Proyek",
+      "contact": "Kontak",
+      "openCaseStudy": "Buka Studi Kasus",
+      "quickView": "Lihat Cepat"
+    },
+    "aria": {
+      "toggleNavigation": "Ubah navigasi",
+      "toggleTheme": "Ubah tema",
+      "goToFrame": "Pergi ke bingkai {index}"
+    },
+    "cursor": {
+      "view": "Lihat",
+      "drag": "Seret",
+      "chat": "Chat"
+    },
+    "slider": {
+      "before": "Sebelum",
+      "after": "Sesudah",
+      "aria": "Slider sebelum-sesudah"
+    },
+    "carousel": {
+      "prev": "Sebelumnya",
+      "next": "Berikutnya",
+      "prevAria": "Gambar sebelumnya",
+      "nextAria": "Gambar berikutnya",
+      "thumbAria": "Pilih gambar {index}",
+      "viewerAria": "Carousel media proyek"
+    },
+    "alt": {
+      "galleryImage": "Gambar galeri",
+      "projectImage": "Gambar proyek"
+    }
+  },
+  "nav": {
+    "links": {
+      "projects": "Proyek",
+      "studio": "Studio",
+      "about": "Tentang",
+      "contact": "Kontak"
+    },
+    "language": {
+      "label": "Bahasa",
+      "en": "EN",
+      "id": "ID"
+    }
+  },
+  "footer": {
+    "tagline": "Arsitektur — Interior — Living",
+    "legal": "© {year} AIL Studio. Hak cipta dilindungi."
+  },
+  "hero": {
+    "badge": "Arsitektur • Interior • Living",
+    "heading": ["Arsitektur khusus", "dan interior untuk", "hidup istimewa."],
+    "alt": "Interior editorial",
+    "description": "Kami merancang ruang tenang yang tahan lama dengan kemewahan halus, proporsi tertib, dan material taktil.",
+    "tags": [
+      "Residensial & Hospitalitas",
+      "Desain layanan penuh",
+      "Asia Tenggara & sekitarnya"
+    ],
+    "scroll": "Gulir"
+  },
+  "home": {
+    "projectGrid": {
+      "title": "Proyek Pilihan",
+      "dialogDescription": "Narasi ruang yang tenang dengan detail presisi dan material yang bertahan lama."
+    },
+    "featuredCaseStudy": {
+      "title": "Studi Kasus Unggulan",
+      "intro": "Menelisik proses, detail, dan performa ruang secara mendalam.",
+      "summary": "Narasi ruang yang tenang dengan detail presisi dan material tahan lama. Studi ini menelusuri proporsi, cahaya, dan sirkulasi dengan palet tertahan."
+    },
+    "materialsPalette": {
+      "title": "Palet Material",
+      "description": "Finishing taktil yang dikurasi untuk atmosfer tenang dan performa panjang.",
+      "ariaSelect": "Pilih material {name}"
+    },
+    "journalTeaser": {
+      "title": "Jurnal / Insight",
+      "description": "Catatan tentang proporsi, materialitas, dan cahaya dari praktik studio.",
+      "ctaAbout": "Tentang studio",
+      "ctaRead": "Baca"
+    },
+    "studioNumbers": {
+      "items": [
+        { "value": 12, "label": "Tahun", "sub": "berpraktik" },
+        { "value": 180, "label": "Proyek", "sub": "terselesaikan" },
+        { "value": 9, "label": "Kota", "sub": "lintas wilayah" },
+        { "value": 14, "label": "Penghargaan", "sub": "pengakuan" }
+      ]
+    },
+    "studioTimeline": {
+      "title": "Linimasa Studio",
+      "milestones": [
+        {
+          "year": "2019",
+          "title": "Studio Berdiri",
+          "text": "Fokus awal pada interior residensial yang tenang."
+        },
+        {
+          "year": "2021",
+          "title": "Komisi Regional",
+          "text": "Memperluas karya ke ruang komersial di Asia Tenggara."
+        },
+        {
+          "year": "2023",
+          "title": "Penghargaan Desain",
+          "text": "Masuk nominasi penghargaan atas detail joinery yang terukur."
+        },
+        {
+          "year": "2025",
+          "title": "Inisiatif Keberlanjutan",
+          "text": "Memperkuat strategi siklus material dan pendekatan pasif."
+        }
+      ]
+    },
+    "principles": {
+      "title": "Prinsip Desain",
+      "description": "Kami mengejar ruang yang tenang melalui proporsi yang terukur, material jujur, dan olah cahaya yang lembut.",
+      "items": [
+        {
+          "title": "Proporsi",
+          "description": "Komposisi terukur dengan ketegangan halus dan ritme yang hening."
+        },
+        {
+          "title": "Materialitas",
+          "description": "Finishing mulia dan taktil dengan patina tahan lama dan penuh pengendalian."
+        },
+        {
+          "title": "Cahaya",
+          "description": "Gradasi lembut dan bukaan presisi yang membentuk atmosfer."
+        }
+      ]
+    },
+    "process": {
+      "title": "Proses",
+      "summary": "Setiap fase bersifat iteratif, terdokumentasi, dan dikoordinasikan dekat dengan klien serta pembuat.",
+      "steps": [
+        {
+          "key": "01",
+          "title": "Discovery",
+          "description": "Membaca brief, konteks tapak, batasan, dan potensi."
+        },
+        {
+          "key": "02",
+          "title": "Konsep",
+          "description": "Narasi ruang, massing, dan koreografi palet."
+        },
+        {
+          "key": "03",
+          "title": "Detil",
+          "description": "Joinery, sambungan, pencahayaan, serta spesifikasi performa."
+        },
+        {
+          "key": "04",
+          "title": "Produksi",
+          "description": "Dokumentasi, koordinasi, tinjauan site, hingga serah terima."
+        }
+      ]
+    },
+    "servicesMarquee": {
+      "items": [
+        "Arsitektur",
+        "Desain Interior",
+        "Furnitur",
+        "Lanskap",
+        "Pencahayaan",
+        "Kurasi Seni"
+      ]
+    },
+    "cinematicStrip": {
+      "title": "Studi Sinematik",
+      "description": "Material, cahaya, dan proporsi pada frame terpilih.",
+      "items": [
+        {
+          "src": "/cinematic-1.webp",
+          "title": "Material & Cahaya",
+          "meta": "Studi tepi travertine",
+          "ratio": "landscape"
+        },
+        {
+          "src": "/cinematic-2.webp",
+          "title": "Detil Joinery",
+          "meta": "Pertemuan kuningan & oak",
+          "ratio": "portrait"
+        },
+        {
+          "src": "/cinematic-3.webp",
+          "title": "Sirkulasi",
+          "meta": "Peralihan lembut antar bidang",
+          "ratio": "landscape"
+        },
+        {
+          "src": "/cinematic-4.webp",
+          "title": "Sudut Tenang",
+          "meta": "Palet tone-on-tone",
+          "ratio": "portrait"
+        },
+        {
+          "src": "/cinematic-5.webp",
+          "title": "Salon",
+          "meta": "Cahaya diffuse",
+          "ratio": "landscape"
+        }
+      ]
+    },
+    "testimonials": {
+      "quotes": [
+        {
+          "quote": "Refined, timeless, dan sangat nyaman dihuni.",
+          "author": "Klien Residensial"
+        },
+        {
+          "quote": "Obsesi pada detil — kemewahan senyap yang tepat.",
+          "author": "Operator Hotel"
+        },
+        {
+          "quote": "Begitu tertahan dengan cahaya yang indah.",
+          "author": "Editor Desain"
+        },
+        {
+          "quote": "Craft dan proporsi melampaui tren.",
+          "author": "Pengembang"
+        }
+      ]
+    },
+    "awardsStrip": {
+      "items": ["Dezeen", "ArchDaily", "DesignBoom", "Elle Decor", "Wallpaper*"]
+    },
+    "clients": {
+      "title": "Klien Terpilih",
+      "list": [
+        "Lumine Group",
+        "Arcadia Dev",
+        "Kawana Hotels",
+        "Astraea Partners",
+        "Citrine Capital",
+        "Nara Living",
+        "Southline",
+        "Vireo Estates"
+      ]
+    },
+    "pressPublications": {
+      "title": "Pers / Publikasi",
+      "items": [
+        {
+          "name": "Dezeen",
+          "year": "2025",
+          "title": "Urban Calm: Apartemen Travertine & Kuningan"
+        },
+        {
+          "name": "ArchDaily",
+          "year": "2024",
+          "title": "Lumière Residence: Dialog dengan Cahaya"
+        },
+        {
+          "name": "Wallpaper*",
+          "year": "2024",
+          "title": "Quiet Luxury: Kejujuran Material di Rumah"
+        },
+        {
+          "name": "DesignBoom",
+          "year": "2023",
+          "title": "Joinery Terukur dalam Interior Minimal"
+        }
+      ]
+    },
+    "newsletter": {
+      "title": "Studio Letters",
+      "description": "Catatan berkala tentang proyek dan proses.",
+      "emailPlaceholder": "Alamat email",
+      "submit": "Berlangganan"
+    },
+    "faq": {
+      "title": "FAQ",
+      "items": [
+        {
+          "question": "Bagaimana alur kerja dari kick-off hingga serah terima?",
+          "answer": "Discovery → konsep → pengembangan desain → dokumentasi teknis → koordinasi tender → supervisi site & commissioning."
+        },
+        {
+          "question": "Apakah studio menerima proyek luar kota/luar negeri?",
+          "answer": "Ya, kami bekerja lintas kota dan regional; koordinasi menggabungkan kunjungan langsung dan review daring."
+        },
+        {
+          "question": "Bagaimana kisaran biaya desain?",
+          "answer": "Fee bergantung skala dan kompleksitas. Estimasi diberikan setelah memahami program, luas, dan target material."
+        },
+        {
+          "question": "Apakah keberlanjutan material diperhatikan?",
+          "answer": "Kami menilai lifecycle, sumber, serta perawatan dengan fokus pada durabilitas dan efisiensi energi pasif."
+        }
+      ]
+    },
+    "projectStarter": {
+      "title": "Mulai Proyek",
+      "description": "Ceritakan singkat mengenai proyek Anda sebagai awal percakapan.",
+      "categoryLabel": "Kategori",
+      "budgetLabel": "Budget",
+      "categories": [
+        "Residensial",
+        "Komersial",
+        "Hospitalitas",
+        "Ruang Kerja",
+        "F&B"
+      ],
+      "budgets": ["Di bawah Rp1 M", "Rp1–5 M", "Rp5–10 M", "Di atas Rp10 M"],
+      "cityLabel": "Kota (opsional)",
+      "cityPlaceholder": "Jakarta / Singapura / …",
+      "cta": "Mulai Brief →",
+      "email": {
+        "subject": "Permintaan Proyek — {category}",
+        "category": "Kategori: {value}",
+        "budget": "Budget: {value}",
+        "city": "Kota: {value}",
+        "greeting": "Halo AIL Studio,",
+        "closing": "Saya ingin berdiskusi mengenai proyek baru. Mohon hubungi saya."
+      }
+    },
+    "enquirySteps": {
+      "title": "Cara Kami Berproses",
+      "steps": [
+        {
+          "key": "01",
+          "title": "Brief & Call",
+          "description": "Kirim scope singkat; kami jadwalkan panggilan 20–30 menit."
+        },
+        {
+          "key": "02",
+          "title": "Pembacaan Awal",
+          "description": "Kami kirim pendekatan awal: strategi, tim, dan estimasi garis besar."
+        },
+        {
+          "key": "03",
+          "title": "Proposal",
+          "description": "Jika sepakat, kami susun proposal honor dan jadwal kerja."
+        }
+      ]
+    },
+    "projectsPage": {
+      "title": "Proyek",
+      "description": "Kurasi karya residensial dan komersial lintas wilayah.",
+      "searchLabel": "Cari",
+      "searchPlaceholder": "Cari berdasarkan judul, tag, atau lokasi",
+      "allTag": "Semua",
+      "sort": {
+        "newest": "Terbaru",
+        "oldest": "Terlama"
+      },
+      "summary": "Menampilkan {count} dari {total} proyek",
+      "summaryTag": " • {tag}",
+      "summaryFiltered": " • disaring",
+      "stats": {
+        "total": "Total Proyek",
+        "years": "Rentang Tahun",
+        "popular": "Kategori Terbanyak"
+      },
+      "metaTitle": "Proyek — AIL Studio"
+    },
+    "caseStudy": {
+      "projectInfo": "Info Proyek",
+      "labels": {
+        "location": "Lokasi",
+        "year": "Tahun",
+        "type": "Jenis",
+        "role": "Peran"
+      },
+      "roleValue": "Arsitektur dan Interior",
+      "beforeAfter": "Sebelum / Sesudah",
+      "metaTitle": "{title} — AIL Studio",
+      "metaDescription": "{title} di {location} • {year}.",
+      "specsTitle": "Spesifikasi",
+      "specs": {
+        "toggleShow": "Tampilkan",
+        "toggleHide": "Sembunyikan",
+        "ariaShow": "Tampilkan spesifikasi",
+        "ariaHide": "Sembunyikan spesifikasi"
+      }
+    },
+    "pressPage": {
+      "title": "Publikasi",
+      "description": "Publikasi terpilih yang mengulas karya dan praktik kami.",
+      "details": "Detail",
+      "metaTitle": "Publikasi — AIL Studio"
+    },
+    "pressDetail": {
+      "featureLabel": "Fitur",
+      "summary": "Liputan tentang pendekatan kami terhadap proporsi, materialitas, dan cahaya pada karya residensial.",
+      "read": "Baca di {name}",
+      "creditsTitle": "Kredit",
+      "credits": {
+        "publication": "Publikasi",
+        "year": "Tahun",
+        "type": "Jenis",
+        "typeValue": "Fitur",
+        "link": "Tautan",
+        "external": "Eksternal"
+      }
+    },
+    "contactCTA": {
+      "title": "Mari kita bentuk ruang berikutnya.",
+      "description": "Bagikan brief dan jadwal Anda—kami akan merespons dengan pembacaan awal dan ruang lingkup.",
+      "primary": "Mulai Proyek",
+      "secondary": "Lihat Proyek"
+    },
+    "enquiriesStrip": {
+      "title": "Pertanyaan & Kolaborasi",
+      "description": "Untuk komisi, kolaborasi, atau media—silakan hubungi kami.",
+      "contactForm": "Form Kontak",
+      "email": "studio@example.com",
+      "phone": "+62 000 0000"
+    }
+  },
+  "about": {
+    "metadataTitle": "Tentang — AIL Studio",
+    "hero": {
+      "eyebrow": "Tentang AIL Studio",
+      "title": "Studio yang berfokus pada proporsi, material, dan cahaya.",
+      "description": "Kami bekerja dengan pengendalian—merancang ruang tenang yang menyatu dengan kehidupan sehari-hari.",
+      "image": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0",
+      "imageAlt": "Potret studio"
+    },
+    "manifesto": {
+      "title": "Manifesto",
+      "paragraphs": [
+        "Kami mengutamakan disiplin dibanding spektakel. Ruang yang terasa tak terelakkan; detil yang lebih ingin dirasakan daripada dilihat. Material dipilih agar menua dengan lembut, cahaya dibentuk agar lapang, dan tatanan ruang disetel mengikuti ritual harian.",
+        "Kami tegas soal servisabilitas—panel akses, tepi pembersihan, dan logika penggantian disisipkan sejak awal. Kemewahan yang tenang adalah kemewahan yang sungguh mendukung kehidupan."
+      ],
+      "image": "https://images.unsplash.com/photo-1693578616322-c8abe6c7393d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+      "imageAlt": "Meja atelier"
+    },
+    "directors": {
+      "title": "Direktur",
+      "subtitle": "Pengawas senior di setiap proyek.",
+      "items": [
+        {
+          "name": "A. Wirawan",
+          "role": "Principal Architect",
+          "img": "https://images.unsplash.com/photo-1620668233692-c83e9563f337?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774",
+          "bio": "Memimpin visi arsitektur dengan penekanan pada proporsi yang tertib, cahaya siang, dan detil yang mudah dirawat."
+        },
+        {
+          "name": "N. Prameswari",
+          "role": "Design Director, Interiors",
+          "img": "https://images.unsplash.com/photo-1738739907559-8998f9e6e626?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774",
+          "bio": "Mengorkestrasi palet interior dan sistem joinery—taktil hangat, tonal tenang, dan nyaman bertahan lama."
+        }
+      ]
+    },
+    "pillars": {
+      "title": "Filosofi",
+      "items": [
+        {
+          "title": "Proporsi Utama",
+          "description": "Kami merujuk pada tatanan klasik dan batasan modern. Setiap ruang diseimbangkan sebelum diberi ornamen."
+        },
+        {
+          "title": "Kejujuran Material",
+          "description": "Batu tetap terasa batu; kayu tetap terasa kayu. Finishing dipilih agar menua dengan anggun."
+        },
+        {
+          "title": "Cahaya Sebagai Material",
+          "description": "Cahaya siang dibentuk, bukan ditambahkan. Bayangan memberi ukuran—kontras dijaga terkendali."
+        },
+        {
+          "title": "Utilitas Tenang",
+          "description": "Detil menghilang ke dalam fungsi. Kenyamanan dan akses servis dirancang, bukan ditempelkan."
+        }
+      ]
+    },
+    "approach": {
+      "title": "Pendekatan",
+      "description": "Dari discovery hingga penalaan purna huni, kami menjaga satu benang jelas: proporsi, material, dan cahaya selaras dengan penggunaan harian.",
+      "steps": [
+        {
+          "key": "01",
+          "title": "Discovery & Brief",
+          "description": "Pemetaan program, prioritas, anggaran, dan penyelarasan jadwal."
+        },
+        {
+          "key": "02",
+          "title": "Konsep & Proporsi",
+          "description": "Massing, studi denah, strategi cahaya, arahan palet."
+        },
+        {
+          "key": "03",
+          "title": "Pengembangan Desain",
+          "description": "Joinery, lapisan material, performa selubung, koordinasi."
+        },
+        {
+          "key": "04",
+          "title": "Dokumentasi",
+          "description": "Paket tender, spesifikasi, review biaya."
+        },
+        {
+          "key": "05",
+          "title": "Delivery & Tuning",
+          "description": "Review lapangan, commissioning, penalaan pasca huni."
+        }
+      ]
+    },
+    "accolades": {
+      "title": "Penghargaan",
+      "items": [
+        {
+          "label": "Regional Design Awards",
+          "value": "Shortlist 2023"
+        },
+        {
+          "label": "Interior Craft Awards",
+          "value": "Nominee 2024"
+        }
+      ]
+    },
+    "publications": {
+      "title": "Publikasi",
+      "items": [
+        {
+          "name": "Anthology",
+          "logo": "https://images.unsplash.com/photo-1596079890687-58c51d24889a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774https://images.unsplash.com/photo-1596079890687-58c51d24889a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774",
+          "href": "#"
+        },
+        {
+          "name": "Frame",
+          "logo": "https://images.unsplash.com/photo-1664711942326-2c3351e215e6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1634",
+          "href": "#"
+        },
+        {
+          "name": "Dezeen",
+          "logo": "https://images.unsplash.com/photo-1637787687868-620915e3b4b5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1160",
+          "href": "#"
+        },
+        {
+          "name": "Wallpaper*",
+          "logo": "https://images.unsplash.com/photo-1654511043142-3785f5e4c8e9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870",
+          "href": "#"
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Galeri Atelier",
+      "locations": "Jakarta • Singapura",
+      "items": [
+        {
+          "src": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0",
+          "ratio": "hero",
+          "title": "Atelier Overview",
+          "meta": "Cahaya diffuse, palet tenang"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6",
+          "ratio": "port",
+          "title": "Studio Entry",
+          "meta": "Cahaya pagi, travertine"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1537726235470-8504e3beef77?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+          "ratio": "land",
+          "title": "Open Desk",
+          "meta": "Pin-up wall & shelving"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2062",
+          "ratio": "port",
+          "title": "Materials Bank",
+          "meta": "Oak, kuningan, batu"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1613914049786-b7e3e8323348?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+          "ratio": "land",
+          "title": "Meeting Nook",
+          "meta": "Kursi lembut di sudut"
+        }
+      ]
+    },
+    "clients": {
+      "title": "Klien Terpilih",
+      "items": [
+        "Aman Group",
+        "Tokopedia",
+        "UOB",
+        "Sequis",
+        "Sinar Mas",
+        "Artotel",
+        "Unilever",
+        "BCA"
+      ]
+    },
+    "timeline": {
+      "title": "Linimasa",
+      "items": [
+        {
+          "year": "2019",
+          "text": "Studio berdiri; komisi residensial perdana."
+        },
+        {
+          "year": "2021",
+          "text": "Proyek hospitalitas & komersial lintas regional."
+        },
+        { "year": "2023", "text": "Publikasi dan nominasi penghargaan." },
+        {
+          "year": "2025",
+          "text": "Spesifikasi berbasis siklus hidup terinstitusikan."
+        }
+      ]
+    },
+    "quote": {
+      "text": "“AIL menghadirkan rumah yang tenang sekaligus fungsional. Craft-nya bertahan di kehidupan sehari-hari.”",
+      "attribution": "Klien — Residensi Privat, 2024"
+    },
+    "cta": {
+      "title": "Mulai Proyek",
+      "description": "Bagikan brief dan jadwal—kami akan merespons dengan pembacaan awal dan ruang lingkup.",
+      "contactLabel": "Form Kontak",
+      "emailLabel": "Email Studio",
+      "emailSubject": "Project Enquiry — AIL Studio"
+    }
+  },
+  "studio": {
+    "metadataTitle": "Studio — AIL Studio",
+    "hero": {
+      "title": "Studio",
+      "description": "Kami merancang dengan pengendalian: material tahan lama, kontras terukur, proporsi tenang.",
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1606744888344-493238951221?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1548",
+          "alt": "Proses studio"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1512972972907-6d71529c5e92?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1742",
+          "alt": "Papan material"
+        }
+      ]
+    },
+    "principles": {
+      "title": "Prinsip",
+      "description": "Karya kami dibangun dari disiplin. Setiap proyek bermula dari proporsi dan cahaya, lalu mengerucut ke detil serta material yang menua dengan martabat. Kami mengejar ruang yang terasa tak terelakkan—tenang, fungsional, dan dermawan dalam penggunaan sehari-hari.",
+      "approach": [
+        "Menahan diri dibanding berlebih; proporsi sebelum ornamen.",
+        "Cahaya alami sebagai material; bayangan sebagai ukuran.",
+        "Palet yang tahan lama, mudah dirawat, dan tenang.",
+        "Detil yang menghilang ke dalam pengalaman."
+      ]
+    },
+    "numbersHeading": "Angka Studio",
+    "numbers": [
+      { "label": "Tahun Aktif", "value": "2019–Sekarang" },
+      { "label": "Proyek Terselesaikan", "value": "80+" },
+      { "label": "Jangkauan Regional", "value": "Asia Tenggara & sekitarnya" },
+      { "label": "Disiplin", "value": "Architecture • Interiors • Living" }
+    ],
+    "capabilities": {
+      "title": "Kemampuan",
+      "items": [
+        {
+          "category": "Arsitektur",
+          "items": [
+            "Konsep & Massing",
+            "Perizinan & Planning",
+            "Selubung & Fasade",
+            "Detil & Spesifikasi"
+          ]
+        },
+        {
+          "category": "Interior",
+          "items": [
+            "Program Tata Ruang",
+            "Joinery & Millwork",
+            "Material & Finishing",
+            "Koordinasi Pencahayaan"
+          ]
+        },
+        {
+          "category": "Living",
+          "items": [
+            "Furnitur & Styling",
+            "Kurasi Seni",
+            "Koordinasi Lanskap",
+            "Penalaan Pasca Huni"
+          ]
+        }
+      ]
+    },
+    "timeline": {
+      "title": "Linimasa",
+      "items": [
+        {
+          "year": "2019",
+          "title": "Studio Berdiri",
+          "description": "Komisi residensial perdana dengan fokus interior tenang."
+        },
+        {
+          "year": "2021",
+          "title": "Karya Regional",
+          "description": "Proyek komersial dan hospitalitas lintas Asia Tenggara."
+        },
+        {
+          "year": "2023",
+          "title": "Pengakuan",
+          "description": "Masuk shortlist penghargaan desain; publikasi dan liputan."
+        },
+        {
+          "year": "2025",
+          "title": "Keberlanjutan",
+          "description": "Spesifikasi berbasis siklus hidup dan strategi pasif dilembagakan."
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Galeri Atelier",
+      "locations": "Jakarta • Singapura",
+      "items": [
+        {
+          "src": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0",
+          "ratio": "hero",
+          "title": "Atelier Overview",
+          "meta": "Cahaya diffuse, palet tenang"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6",
+          "ratio": "port",
+          "title": "Studio Entry",
+          "meta": "Cahaya pagi, travertine"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1537726235470-8504e3beef77?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+          "ratio": "land",
+          "title": "Open Desk",
+          "meta": "Pin-up wall & shelving"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2062",
+          "ratio": "port",
+          "title": "Materials Bank",
+          "meta": "Oak, kuningan, batu"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1613914049786-b7e3e8323348?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+          "ratio": "land",
+          "title": "Meeting Nook",
+          "meta": "Kursi lembut di sudut"
+        }
+      ]
+    },
+    "careers": {
+      "title": "Karier & Kolaborasi",
+      "description": "Kami terbuka pada portofolio arsitek, desainer interior, dan kolaborator yang menghargai craft disiplin. Kirim CV dan karya pilihan (PDF maks 10 MB).",
+      "emailLabel": "Email Studio",
+      "contactLabel": "Mulai Proyek",
+      "emailSubject": "Career Enquiry — AIL Studio"
+    }
+  },
+  "contact": {
+    "metadataTitle": "Kontak — AIL Studio",
+    "hero": {
+      "eyebrow": "Kontak AIL Studio",
+      "title": "Mulai percakapan proyek.",
+      "description": "Bagikan brief dan jadwal—kami akan membalas via WhatsApp dengan bacaan awal dan langkah berikut.",
+      "image": "https://images.unsplash.com/photo-1700475021612-1005dfda26ab?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+      "imageAlt": "Nuansa studio"
+    },
+    "sidebar": {
+      "title": "Kontak Umum",
+      "email": "studio@example.com",
+      "hoursLabel": "Jam Kantor",
+      "hoursValue": "Senin–Jumat, 10.00–18.00",
+      "phoneLabel": "Telepon",
+      "phoneValue": "+62 21 0000 0000",
+      "jakartaLabel": "Jakarta",
+      "jakartaValue": "Kebayoran Baru",
+      "singaporeLabel": "Singapura",
+      "singaporeValue": "River Valley",
+      "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+      "imageAlt": "Eksterior studio"
+    },
+    "note": "Cantumkan estimasi budget dan target tanggal jika ada. Dokumen rinci dapat dikirim setelah chat WhatsApp dimulai."
+  },
+  "contactForm": {
+    "title": "Form Proyek",
+    "description": "Kami akan merespons via WhatsApp dalam 2–3 hari kerja.",
+    "types": ["Proyek", "Kolaborasi", "Media"],
+    "projectTypes": [
+      "Residensial",
+      "Hospitalitas",
+      "Ruang Kerja",
+      "Ritel",
+      "Mixed-use"
+    ],
+    "budgetPresets": [
+      "Di bawah USD 250k",
+      "USD 250k–500k",
+      "USD 500k–1M",
+      "Di atas USD 1M"
+    ],
+    "timelinePresets": ["0–3 bulan", "3–6 bulan", "6–12 bulan", "12+ bulan"],
+    "placeholders": {
+      "name": "Nama lengkap *",
+      "email": "Email *",
+      "phone": "Nomor WhatsApp (opsional)",
+      "location": "Lokasi proyek (kota/negara)",
+      "message": "Ceritakan lingkup, ruang, batasan, dan tujuan proyek. *"
+    },
+    "labels": {
+      "projectType": "Jenis proyek",
+      "budget": "Budget",
+      "timeline": "Timeline"
+    },
+    "errors": {
+      "global": "Mohon lengkapi formulir terlebih dahulu.",
+      "name": "Nama wajib diisi.",
+      "email": "Email valid wajib diisi.",
+      "message": "Mohon ceritakan sedikit mengenai proyek."
+    },
+    "buttons": {
+      "submit": "Kirim via WhatsApp",
+      "submitting": "Membuka WhatsApp…"
+    },
+    "success": "Dialihkan ke WhatsApp. Jika belum terbuka, izinkan pop-up lalu coba lagi.",
+    "whatsAppMessage": "Halo AIL Studio, saya ingin berdiskusi tentang proyek baru. Bolehkah kita mengobrol?",
+    "whatsAppSubject": "{type} Enquiry — AIL Studio",
+    "messageLabels": {
+      "name": "Nama",
+      "email": "Email",
+      "phone": "WhatsApp",
+      "location": "Lokasi",
+      "type": "Jenis",
+      "budget": "Budget",
+      "timeline": "Timeline",
+      "message": "Pesan:"
+    }
+  },
+  "mapBanner": {
+    "label": "Studio",
+    "locations": "Jakarta • Singapura",
+    "imageAlt": "Placeholder peta"
+  },
+  "whatsAppButton": {
+    "label": "WhatsApp",
+    "message": "Halo AIL Studio, saya ingin berdiskusi tentang proyek baru. Bolehkah kita mengobrol?",
+    "ariaLabel": "Chat via WhatsApp"
+  },
+  "globalLoader": {
+    "tagline": "Architecture • Interiors • Living",
+    "srLoading": "Memuat"
+  },
+  "seo": {
+    "title": "Architecture • Interiors • Living",
+    "description": "Studio arsitektur dan interior mewah dengan pendekatan bespoke untuk residensial dan komersial."
+  },
+  "data": {
+    "projects": [
+      {
+        "slug": "residence-lumiere",
+        "title": "Residence Lumière",
+        "location": "Jakarta, ID",
+        "cover": "/hero-frame-1.webp",
+        "year": "2025",
+        "tags": ["Residensial", "Interior"],
+        "images": [
+          "/hero-frame-1.webp",
+          "/project-residence-2.webp",
+          "/project-residence-3.webp"
+        ],
+        "chapters": [
+          {
+            "key": "arrival",
+            "title": "Kedatangan",
+            "prose": "Gradasi cahaya lembut menuntun sekuens masuk, menyeimbangkan privasi dan keterbukaan.",
+            "image": "https://images.unsplash.com/photo-1497366216548-37526070297c",
+            "gallery": [
+              {
+                "src": "https://images.unsplash.com/photo-1605774337664-7a846e9cdf17?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1548",
+                "ratio": "landscape"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870",
+                "ratio": "portrait"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=654",
+                "ratio": "portrait"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1524758631624-e2822e304c36",
+                "ratio": "landscape"
+              }
+            ]
+          },
+          {
+            "key": "gallery",
+            "title": "Galeri",
+            "prose": "Palet tertahan membingkai karya seni dan panorama dengan proporsi terukur.",
+            "image": "https://images.unsplash.com/photo-1606744888344-493238951221?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1548",
+            "gallery": [
+              {
+                "src": "https://images.unsplash.com/photo-1618221469555-7f3ad97540d6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2064",
+                "ratio": "landscape"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1622372738946-62e02505feb3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1064",
+                "ratio": "portrait"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1501045661006-fcebe0257c3f",
+                "ratio": "landscape"
+              }
+            ]
+          },
+          {
+            "key": "salon",
+            "title": "Salon",
+            "prose": "Joinery dan aksen kuningan memberi kehangatan pada inti ruang keluarga yang tenang.",
+            "image": "https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2660",
+            "gallery": [
+              {
+                "src": "https://images.unsplash.com/photo-1653972233229-1b8c042d6d8e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2064",
+                "ratio": "landscape"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774",
+                "ratio": "portrait"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+                "ratio": "landscape"
+              }
+            ]
+          }
+        ],
+        "specs": [
+          { "label": "Klien", "value": "Pribadi" },
+          { "label": "Luas", "value": "380 m²" },
+          { "label": "Program", "value": "Residensial — Interior" },
+          {
+            "label": "Material",
+            "value": "Travertine, Oak Sikat, Kuningan Tua"
+          },
+          {
+            "label": "Konsultan",
+            "value": "Lighting Lab, Verde Landscape"
+          }
+        ],
+        "beforeAfter": {
+          "before": "https://images.unsplash.com/photo-1724166655256-0ae10f1ab89a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1742",
+          "after": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0"
+        }
+      },
+      {
+        "slug": "the-brass-house",
+        "title": "The Brass House",
+        "location": "Bandung, ID",
+        "cover": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+        "year": "2024",
+        "tags": ["Residensial", "Arsitektur"],
+        "images": [
+          "/project-thebrash-1.webp",
+          "/project-thebrash-2.webp",
+          "/project-thebrash-3.webp"
+        ],
+        "chapters": [
+          {
+            "key": "threshold",
+            "title": "Ambang",
+            "prose": "Ambang kuningan menandai transisi antara zona publik dan privat.",
+            "image": "https://images.unsplash.com/photo-1618219740975-d40978bb7378?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2200"
+          },
+          {
+            "key": "void",
+            "title": "Void",
+            "prose": "Rongga vertikal menarik cahaya siang melintasi lantai, mengurangi beban lingkungan.",
+            "image": "https://images.unsplash.com/photo-1652474149355-34341222e811?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1934"
+          },
+          {
+            "key": "terrace",
+            "title": "Teras",
+            "prose": "Tanaman dan batu membentuk mikro-klimat untuk ritual harian.",
+            "image": "https://images.unsplash.com/photo-1717355036058-b3a66c647cad?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740"
+          }
+        ],
+        "specs": [
+          { "label": "Klien", "value": "Pribadi" },
+          { "label": "Luas", "value": "380 m²" },
+          { "label": "Program", "value": "Residensial — Interior" },
+          {
+            "label": "Material",
+            "value": "Travertine, Oak Sikat, Kuningan Tua"
+          },
+          {
+            "label": "Konsultan",
+            "value": "Lighting Lab, Verde Landscape"
+          }
+        ],
+        "beforeAfter": {
+          "before": "https://images.unsplash.com/photo-1724166655256-0ae10f1ab89a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1742",
+          "after": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0"
+        }
+      },
+      {
+        "slug": "alto-atelier",
+        "title": "Alto Atelier",
+        "location": "Singapura",
+        "cover": "/project-alto-1.webp",
+        "year": "2025",
+        "tags": ["Komersial", "Interior"],
+        "images": [
+          "/project-alto-1.webp",
+          "/project-alto-2.webp",
+          "/project-alto-3.webp"
+        ],
+        "chapters": [
+          {
+            "key": "atelier",
+            "title": "Atelier",
+            "prose": "Lantai produksi fleksibel mengintegrasikan meja perajin dan ruang rapat lembut.",
+            "image": "https://images.unsplash.com/photo-1501045661006-fcebe0257c3f"
+          },
+          {
+            "key": "mezzanine",
+            "title": "Mezanin",
+            "prose": "Baja ringan dan sekat linen membagi kantong kolaborasi.",
+            "image": "https://images.unsplash.com/photo-1497366216548-37526070297c"
+          },
+          {
+            "key": "lounge",
+            "title": "Lounge",
+            "prose": "Lounge tenang meredam kota dengan tekstur bernuansa serasi.",
+            "image": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0"
+          }
+        ],
+        "specs": [
+          { "label": "Klien", "value": "Pribadi" },
+          { "label": "Luas", "value": "380 m²" },
+          { "label": "Program", "value": "Residensial — Interior" },
+          {
+            "label": "Material",
+            "value": "Travertine, Oak Sikat, Kuningan Tua"
+          },
+          {
+            "label": "Konsultan",
+            "value": "Lighting Lab, Verde Landscape"
+          }
+        ],
+        "beforeAfter": {
+          "before": "https://images.unsplash.com/photo-1724166655256-0ae10f1ab89a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1742",
+          "after": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0"
+        }
+      }
+    ],
+    "press": [
+      {
+        "slug": "dezeen-urban-calm",
+        "name": "Dezeen",
+        "year": "2025",
+        "title": "Ketenteraman Urban: Apartemen Kuningan dan Travertine",
+        "url": "https://www.dezeen.com/",
+        "logo": "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6"
+      },
+      {
+        "slug": "archdaily-lumiere",
+        "name": "ArchDaily",
+        "year": "2024",
+        "title": "Residence Lumière: Dialog dengan Cahaya",
+        "url": "https://www.archdaily.com/",
+        "logo": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4"
+      },
+      {
+        "slug": "wallpaper-quiet-luxury",
+        "name": "Wallpaper*",
+        "year": "2024",
+        "title": "Kemewahan Senyap: Kejujuran Material di Rumah",
+        "url": "https://www.wallpaper.com/",
+        "logo": "https://images.unsplash.com/photo-1540148426945-4c6d8fea0ecb"
+      }
+    ],
+    "materials": [
+      {
+        "key": "oak-brush",
+        "name": "Oak Sikat",
+        "desc": "Serat hangat dengan tekstur sikat untuk kedalaman halus.",
+        "swatch": "/project-alto-3.webp",
+        "preview": "/project-alto-3.webp"
+      },
+      {
+        "key": "travertine",
+        "name": "Travertine Romawi",
+        "desc": "Batu berpori dengan finishing honed, abadi dan menenangkan.",
+        "swatch": "/material-2.webp",
+        "preview": "/material-2.webp"
+      },
+      {
+        "key": "brass",
+        "name": "Kuningan Tua",
+        "desc": "Kilau lembut dengan patina gosok tangan.",
+        "swatch": "/material-3.webp",
+        "preview": "/material-3.webp"
+      },
+      {
+        "key": "linen",
+        "name": "Linen Alami",
+        "desc": "Anyaman netral untuk kelembutan akustik.",
+        "swatch": "/material-4.webp",
+        "preview": "/material-4.webp"
+      }
+    ],
+    "posts": [
+      {
+        "slug": "proportion-light",
+        "title": "Proporsi dan Cahaya dalam Kemewahan Senyap",
+        "cover": "/project-thebrash-2.webp",
+        "tag": "Insight",
+        "excerpt": "Bagaimana geometri terukur dan gradasi lembut membentuk suasana."
+      },
+      {
+        "slug": "material-honesty",
+        "title": "Kejujuran Material: Patina Seiring Waktu",
+        "cover": "/post-2.webp",
+        "tag": "Jurnal",
+        "excerpt": "Memilih finishing luhur yang menua dengan bermartabat."
+      },
+      {
+        "slug": "craft-joinery",
+        "title": "Joinery Terbuat dengan Teliti untuk Interior Tenang",
+        "cover": "/hero-frame-1.webp",
+        "tag": "Praktik",
+        "excerpt": "Mengapa detail sambungan dan sudut menentukan keseluruhan."
+      }
+    ]
+  }
+}

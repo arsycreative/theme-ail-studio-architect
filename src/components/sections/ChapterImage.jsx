@@ -1,10 +1,12 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 export default function ChapterImage({ src, alt }) {
   const ref = useRef(null);
+  const tAlt = useTranslations("common.alt");
 
   useEffect(() => {
     const el = ref.current;
@@ -32,7 +34,7 @@ export default function ChapterImage({ src, alt }) {
     <div ref={ref} className="relative w-full aspect-[16/9] overflow-hidden">
       <Image
         src={src}
-        alt={alt}
+        alt={alt ?? tAlt("galleryImage")}
         fill
         className="object-cover will-change-transform"
         sizes="(min-width: 1024px) 900px, 100vw"

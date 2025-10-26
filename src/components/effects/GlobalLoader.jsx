@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 /**
  * Global loader overlay that covers the viewport during initial hydration
@@ -9,6 +10,8 @@ import { usePathname } from "next/navigation";
  */
 export default function GlobalLoader() {
   const pathname = usePathname();
+  const tLoader = useTranslations("globalLoader");
+  const tCommon = useTranslations("common");
   const [shouldRender, setShouldRender] = useState(true);
   const [visible, setVisible] = useState(true);
   const hideTimerRef = useRef();
@@ -56,17 +59,17 @@ export default function GlobalLoader() {
       <div className="flex flex-col items-center gap-6">
         <div className="flex flex-col items-center gap-2 text-center">
           <span className="text-xs uppercase tracking-[0.6em] text-muted-foreground">
-            Architecture • Interiors • Living
+            {tLoader("tagline")}
           </span>
           <span className="text-3xl font-semibold tracking-wide">
-            AIL Studio
+            {tCommon("brand")}
           </span>
         </div>
         <div
           className="h-14 w-14 animate-spin rounded-full border border-border/60 border-t-primary"
           aria-hidden="true"
         />
-        <span className="sr-only">Loading</span>
+        <span className="sr-only">{tLoader("srLoading")}</span>
       </div>
     </div>
   );

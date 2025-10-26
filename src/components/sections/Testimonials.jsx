@@ -1,16 +1,15 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
+import { useTranslations } from "next-intl";
 import { gsap } from "@/lib/gsap";
-
-const quotes = [
-  { q: "Refined, timeless, and deeply livable.", a: "Residence Client" },
-  { q: "Obsessed with details—quiet luxury done right.", a: "Hotel Operator" },
-  { q: "Beautifully restrained. The light is masterful.", a: "Design Editor" },
-  { q: "Craft and proportion beyond trends.", a: "Developer" },
-];
 
 export default function Testimonials() {
   const ref = useRef(null);
+  const tTestimonials = useTranslations("home.testimonials");
+  const quotes = useMemo(
+    () => tTestimonials.raw("quotes") ?? [],
+    [tTestimonials]
+  );
 
   useEffect(() => {
     const track = ref.current?.querySelector(".track");
@@ -33,16 +32,16 @@ export default function Testimonials() {
               .fill(0)
               .map((_, i) => (
                 <span key={i} className="inline-flex gap-8 px-8 align-top">
-                  {quotes.map((t) => (
+                  {quotes.map((item) => (
                     <span
-                      key={t.q}
+                      key={item.quote}
                       className="inline-block max-w-[38ch] align-top"
                     >
                       <span className="text-base md:text-lg">
-                        &ldquo;{t.q}&rdquo;
+                        &ldquo;{item.quote}&rdquo;
                       </span>
                       <span className="block text-sm text-muted-foreground mt-2">
-                        — {t.a}
+                        — {item.author}
                       </span>
                     </span>
                   ))}

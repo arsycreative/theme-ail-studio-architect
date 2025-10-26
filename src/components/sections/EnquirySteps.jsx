@@ -1,9 +1,13 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
+import { useTranslations } from "next-intl";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 export default function EnquirySteps() {
   const ref = useRef(null);
+  const tSteps = useTranslations("home.enquirySteps");
+  const steps = useMemo(() => tSteps.raw("steps") ?? [], [tSteps]);
+  const title = tSteps("title");
 
   useEffect(() => {
     const el = ref.current;
@@ -28,33 +32,19 @@ export default function EnquirySteps() {
   return (
     <section ref={ref} className="mx-auto max-w-7xl px-6 py-10">
       <div className="rounded-2xl border border-border/70 p-6 md:p-8">
-        <h2 className="text-2xl md:text-3xl font-semibold">How We Engage</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold">{title}</h2>
         <div className="mt-6 grid md:grid-cols-3 gap-4">
-          {[
-            {
-              k: "01",
-              t: "Brief & Call",
-              d: "Kamu kirim scope singkat; kami jadwalkan call 20–30 menit.",
-            },
-            {
-              k: "02",
-              t: "Initial Read",
-              d: "Kami kirim bacaan awal: pendekatan, tim, dan estimasi garis besar.",
-            },
-            {
-              k: "03",
-              t: "Proposal",
-              d: "Jika cocok, kami susun fee proposal dan perkiraan jadwal kerja.",
-            },
-          ].map((s) => (
+          {steps.map((s) => (
             <div
-              key={s.k}
+              key={s.key}
               data-step
               className="rounded-xl border border-border/70 p-4"
             >
-              <div className="text-xs text-muted-foreground">{s.k}</div>
-              <div className="mt-1 font-medium">{s.t}</div>
-              <p className="mt-1 text-sm text-muted-foreground">{s.d}</p>
+              <div className="text-xs text-muted-foreground">{s.key}</div>
+              <div className="mt-1 font-medium">{s.title}</div>
+              <p className="mt-1 text-sm text-muted-foreground">
+                {s.description}
+              </p>
             </div>
           ))}
         </div>

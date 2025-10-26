@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import {
   Dialog,
   DialogContent,
@@ -9,8 +9,12 @@ import {
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import ProjectMediaCarousel from "@/components/sections/ProjectMediaCarousel";
+import { useTranslations } from "next-intl";
 
 export default function ProjectQuickView({ open, onClose, project }) {
+  const tCommon = useTranslations("common");
+  const tProjectGrid = useTranslations("home.projectGrid");
+
   if (!project) return null;
 
   return (
@@ -54,7 +58,7 @@ export default function ProjectQuickView({ open, onClose, project }) {
 
             <p className="text-sm text-muted-foreground leading-relaxed">
               {project.description ||
-                "A calm spatial narrative with precise details and enduring materials."}
+                tProjectGrid("dialogDescription")}
             </p>
 
             {project.tags?.length > 0 && (
@@ -71,17 +75,17 @@ export default function ProjectQuickView({ open, onClose, project }) {
               <Link
                 href={`/case-studies/${project.slug}`}
                 className="underline underline-offset-4"
-                data-cursor="View"
+                data-cursor={tCommon("cta.openCaseStudy")}
               >
-                Open Case Study
+                {tCommon("cta.openCaseStudy")}
               </Link>
               <span className="text-muted-foreground">/</span>
               <Link
                 href="/contact"
                 className="underline underline-offset-4"
-                data-cursor="View"
+                data-cursor={tCommon("cta.contact")}
               >
-                Start a Project
+                {tCommon("cta.startProject")}
               </Link>
             </div>
           </div>

@@ -1,9 +1,12 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 export default function ContactCTA() {
+  const tCTA = useTranslations("home.contactCTA");
+
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">
       <div className="relative overflow-hidden rounded-3xl border border-border/70">
@@ -23,18 +26,17 @@ export default function ContactCTA() {
         {/* content */}
         <div className="relative p-8 md:p-12 max-w-2xl">
           <h2 className="text-2xl md:text-3xl font-semibold">
-            Let’s shape your next space.
+            {tCTA("title")}
           </h2>
           <p className="text-muted-foreground mt-2">
-            Share your brief and timeline—we’ll respond with an initial read and
-            scope.
+            {tCTA("description")}
           </p>
           <div className="mt-6 flex gap-3">
             <Button asChild className="rounded-xl">
-              <Link href="/contact">Start a Project</Link>
+              <Link href="/contact">{tCTA("primary")}</Link>
             </Button>
             <Button asChild variant="secondary" className="rounded-xl">
-              <Link href="/projects">View Projects</Link>
+              <Link href="/projects">{tCTA("secondary")}</Link>
             </Button>
           </div>
         </div>

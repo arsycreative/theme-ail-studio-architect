@@ -1,0 +1,1145 @@
+{
+  "common": {
+    "brand": "AIL Studio",
+    "loading": "Loading",
+    "theme": "Theme",
+    "cta": {
+      "viewAll": "View all",
+      "startProject": "Start a Project",
+      "contact": "Contact",
+      "openCaseStudy": "Open Case Study",
+      "quickView": "Quick View"
+    },
+    "aria": {
+      "toggleNavigation": "Toggle navigation",
+      "toggleTheme": "Toggle theme",
+      "goToFrame": "Go to frame {index}"
+    },
+    "cursor": {
+      "view": "View",
+      "drag": "Drag",
+      "chat": "Chat"
+    },
+    "slider": {
+      "before": "Before",
+      "after": "After",
+      "aria": "Before-after slider"
+    },
+    "carousel": {
+      "prev": "Prev",
+      "next": "Next",
+      "prevAria": "Previous image",
+      "nextAria": "Next image",
+      "thumbAria": "Select image {index}",
+      "viewerAria": "Project media carousel"
+    },
+    "alt": {
+      "galleryImage": "Gallery image",
+      "projectImage": "Project image"
+    }
+  },
+  "nav": {
+    "links": {
+      "projects": "Projects",
+      "studio": "Studio",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "language": {
+      "label": "Language",
+      "en": "EN",
+      "id": "ID"
+    }
+  },
+  "footer": {
+    "tagline": "Architecture — Interiors — Living",
+    "legal": "© {year} AIL Studio. All rights reserved."
+  },
+  "hero": {
+    "badge": "Architecture • Interiors • Living",
+    "heading": [
+      "Bespoke architecture",
+      "and interiors for",
+      "remarkable living."
+    ],
+    "alt": "Editorial interior",
+    "description": "We craft calm, enduring spaces with quiet luxury, disciplined proportions, and tactile materiality.",
+    "tags": [
+      "Residential & Hospitality",
+      "Full-service Design",
+      "SEA & Beyond"
+    ],
+    "scroll": "Scroll"
+  },
+  "home": {
+    "projectGrid": {
+      "title": "Selected Projects",
+      "dialogDescription": "A calm spatial narrative with precise details and enduring materials."
+    },
+    "featuredCaseStudy": {
+      "title": "Featured Case Study",
+      "intro": "A deeper look into process, details, and spatial performance.",
+      "summary": "A calm spatial narrative with precise details and enduring materials. The study explores proportion, light, and circulation with a restrained palette."
+    },
+    "materialsPalette": {
+      "title": "Materials Palette",
+      "description": "Tactile finishes curated for calm atmospheres and lasting performance.",
+      "ariaSelect": "Select material {name}"
+    },
+    "journalTeaser": {
+      "title": "Journal / Insights",
+      "description": "Notes on proportion, materiality, and light from studio practice.",
+      "ctaAbout": "About the studio",
+      "ctaRead": "Read"
+    },
+    "studioNumbers": {
+      "items": [
+        { "value": 12, "label": "Years", "sub": "practice" },
+        { "value": 180, "label": "Projects", "sub": "delivered" },
+        { "value": 9, "label": "Cities", "sub": "across regions" },
+        { "value": 14, "label": "Awards", "sub": "recognitions" }
+      ]
+    },
+    "studioTimeline": {
+      "title": "Studio Timeline",
+      "milestones": [
+        {
+          "year": "2019",
+          "title": "Studio Founded",
+          "text": "Initial practice focusing on residential interiors."
+        },
+        {
+          "year": "2021",
+          "title": "Regional Commission",
+          "text": "Expanded work to commercial spaces across Southeast Asia."
+        },
+        {
+          "year": "2023",
+          "title": "Award Recognition",
+          "text": "Recognized in design awards for crafted joinery."
+        },
+        {
+          "year": "2025",
+          "title": "Sustainable Initiative",
+          "text": "Material lifecycle and passive strategies refined."
+        }
+      ]
+    },
+    "principles": {
+      "title": "Design Principles",
+      "description": "We pursue serene spaces through studied proportion, honest materials, and nuanced light.",
+      "items": [
+        {
+          "title": "Proportion",
+          "description": "Measured compositions with quiet tension and calm rhythms."
+        },
+        {
+          "title": "Materiality",
+          "description": "Noble, tactile finishes with durable patina and restraint."
+        },
+        {
+          "title": "Light",
+          "description": "Soft gradients and precise apertures that shape atmospheres."
+        }
+      ]
+    },
+    "process": {
+      "title": "Process",
+      "summary": "Each phase is iterative, documented, and coordinated closely with clients and makers.",
+      "steps": [
+        {
+          "key": "01",
+          "title": "Discovery",
+          "description": "Brief, site reading, constraints and potential mapping."
+        },
+        {
+          "key": "02",
+          "title": "Concept",
+          "description": "Spatial narrative, massing, and palette choreography."
+        },
+        {
+          "key": "03",
+          "title": "Detailing",
+          "description": "Joinery, junctions, lighting, and performance specifications."
+        },
+        {
+          "key": "04",
+          "title": "Delivery",
+          "description": "Documentation, coordination, site review, handover."
+        }
+      ]
+    },
+    "servicesMarquee": {
+      "items": [
+        "Architecture",
+        "Interior Design",
+        "Furniture",
+        "Landscape",
+        "Lighting",
+        "Art Curation"
+      ]
+    },
+    "cinematicStrip": {
+      "title": "Cinematic Study",
+      "description": "Material, light, and proportion across selected frames.",
+      "items": [
+        {
+          "src": "/cinematic-1.webp",
+          "title": "Material & Light",
+          "meta": "Travertine edge study",
+          "ratio": "landscape"
+        },
+        {
+          "src": "/cinematic-2.webp",
+          "title": "Joinery Detail",
+          "meta": "Brass & oak junction",
+          "ratio": "portrait"
+        },
+        {
+          "src": "/cinematic-3.webp",
+          "title": "Circulation",
+          "meta": "Soft reveal across planes",
+          "ratio": "landscape"
+        },
+        {
+          "src": "/cinematic-4.webp",
+          "title": "Quiet Corner",
+          "meta": "Tone-on-tone palette",
+          "ratio": "portrait"
+        },
+        {
+          "src": "/cinematic-5.webp",
+          "title": "Salon",
+          "meta": "Diffuse daylight",
+          "ratio": "landscape"
+        }
+      ]
+    },
+    "testimonials": {
+      "quotes": [
+        {
+          "quote": "Refined, timeless, and deeply livable.",
+          "author": "Residence Client"
+        },
+        {
+          "quote": "Obsessed with details—quiet luxury done right.",
+          "author": "Hotel Operator"
+        },
+        {
+          "quote": "Beautifully restrained. The light is masterful.",
+          "author": "Design Editor"
+        },
+        {
+          "quote": "Craft and proportion beyond trends.",
+          "author": "Developer"
+        }
+      ]
+    },
+    "awardsStrip": {
+      "items": ["Dezeen", "ArchDaily", "DesignBoom", "Elle Decor", "Wallpaper*"]
+    },
+    "clients": {
+      "title": "Selected Clients",
+      "list": [
+        "Lumine Group",
+        "Arcadia Dev",
+        "Kawana Hotels",
+        "Astraea Partners",
+        "Citrine Capital",
+        "Nara Living",
+        "Southline",
+        "Vireo Estates"
+      ]
+    },
+    "pressPublications": {
+      "title": "Press / Publications",
+      "items": [
+        {
+          "name": "Dezeen",
+          "year": "2025",
+          "title": "Urban Calm: Brass & Travertine Apartment"
+        },
+        {
+          "name": "ArchDaily",
+          "year": "2024",
+          "title": "Lumière Residence: A Dialogue with Light"
+        },
+        {
+          "name": "Wallpaper*",
+          "year": "2024",
+          "title": "Quiet Luxury: Material Honesty at Home"
+        },
+        {
+          "name": "DesignBoom",
+          "year": "2023",
+          "title": "Crafted Joinery in Minimal Interiors"
+        }
+      ]
+    },
+    "newsletter": {
+      "title": "Studio Letters",
+      "description": "Occasional notes on projects and process.",
+      "emailPlaceholder": "Email address",
+      "submit": "Subscribe"
+    },
+    "faq": {
+      "title": "FAQ",
+      "items": [
+        {
+          "question": "What is the workflow from kick-off to handover?",
+          "answer": "Discovery → concept → design development → technical documentation → tender coordination → site supervision & commissioning."
+        },
+        {
+          "question": "Do you take on overseas projects?",
+          "answer": "Yes, we work across cities and regions; coordination blends in-person site reviews and remote collaboration."
+        },
+        {
+          "question": "How are design fees structured?",
+          "answer": "Fees are based on scope and complexity. We estimate after understanding program, area, and material targets."
+        },
+        {
+          "question": "Is material sustainability considered?",
+          "answer": "We evaluate lifecycle, sourcing, and maintenance with emphasis on durability and passive energy efficiency."
+        }
+      ]
+    },
+    "projectStarter": {
+      "title": "Start a Project",
+      "description": "Tell us a little about your project to get the conversation started.",
+      "categoryLabel": "Category",
+      "budgetLabel": "Budget",
+      "categories": [
+        "Residential",
+        "Commercial",
+        "Hospitality",
+        "Workspace",
+        "F&B"
+      ],
+      "budgets": ["Under IDR 1B", "IDR 1–5B", "IDR 5–10B", "Above IDR 10B"],
+      "cityLabel": "City (optional)",
+      "cityPlaceholder": "Jakarta / Singapore / …",
+      "cta": "Start Brief →",
+      "email": {
+        "subject": "New Project Enquiry — {category}",
+        "category": "Category: {value}",
+        "budget": "Budget: {value}",
+        "city": "City: {value}",
+        "greeting": "Hello AIL Studio,",
+        "closing": "I'd like to discuss a new project. Please get in touch."
+      }
+    },
+    "enquirySteps": {
+      "title": "How We Engage",
+      "steps": [
+        {
+          "key": "01",
+          "title": "Brief & Call",
+          "description": "Share a short scope; we schedule a 20–30 minute call."
+        },
+        {
+          "key": "02",
+          "title": "Initial Read",
+          "description": "We send an initial read: approach, team, and outline estimate."
+        },
+        {
+          "key": "03",
+          "title": "Proposal",
+          "description": "If aligned, we prepare a fee proposal and draft schedule."
+        }
+      ]
+    },
+    "projectsPage": {
+      "title": "Projects",
+      "description": "A curation of residential and commercial works across regions.",
+      "searchLabel": "Search",
+      "searchPlaceholder": "Search by title, tag, or location",
+      "allTag": "All",
+      "sort": {
+        "newest": "Newest",
+        "oldest": "Oldest"
+      },
+      "summary": "Showing {count} of {total} projects",
+      "summaryTag": " • {tag}",
+      "summaryFiltered": " • filtered",
+      "stats": {
+        "total": "Total Projects",
+        "years": "Active Years",
+        "popular": "Most Frequent Category"
+      },
+      "metaTitle": "Projects — AIL Studio"
+    },
+    "caseStudy": {
+      "projectInfo": "Project Info",
+      "labels": {
+        "location": "Location",
+        "year": "Year",
+        "type": "Type",
+        "role": "Role"
+      },
+      "roleValue": "Architecture and Interiors",
+      "beforeAfter": "Before / After",
+      "metaTitle": "{title} — AIL Studio",
+      "metaDescription": "{title} in {location} • {year}.",
+      "specsTitle": "Specifications",
+      "specs": {
+        "toggleShow": "Show",
+        "toggleHide": "Hide",
+        "ariaShow": "Show specifications",
+        "ariaHide": "Hide specifications"
+      }
+    },
+    "pressPage": {
+      "title": "Press",
+      "description": "Selected publications and features on our work and practice.",
+      "details": "Details",
+      "metaTitle": "Press — AIL Studio"
+    },
+    "pressDetail": {
+      "featureLabel": "Feature",
+      "summary": "Coverage on our approach to proportion, materiality, and light across residential work.",
+      "read": "Read on {name}",
+      "creditsTitle": "Credits",
+      "credits": {
+        "publication": "Publication",
+        "year": "Year",
+        "type": "Type",
+        "typeValue": "Feature",
+        "link": "Link",
+        "external": "External"
+      }
+    },
+    "contactCTA": {
+      "title": "Let’s shape your next space.",
+      "description": "Share your brief and timeline—we’ll respond with an initial read and scope.",
+      "primary": "Start a Project",
+      "secondary": "View Projects"
+    },
+    "enquiriesStrip": {
+      "title": "Enquiries & Collaborations",
+      "description": "For commissions, collaborations, or press—please get in touch.",
+      "contactForm": "Contact Form",
+      "email": "studio@example.com",
+      "phone": "+62 000 0000"
+    }
+  },
+  "about": {
+    "metadataTitle": "About — AIL Studio",
+    "hero": {
+      "eyebrow": "About AIL Studio",
+      "title": "A practice devoted to proportion, material, and light.",
+      "description": "We work with restraint—designing calm, enduring spaces tailored to everyday life.",
+      "image": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0",
+      "imageAlt": "Studio portrait"
+    },
+    "manifesto": {
+      "title": "Manifesto",
+      "paragraphs": [
+        "We value discipline over spectacle. Rooms that feel inevitable; details that prefer to be felt rather than seen. Materials are chosen to wear softly, light is shaped to be generous, and spatial order is tuned to daily rituals.",
+        "We are rigorous about serviceability—access panels, cleaning edges, and replacement logic are embedded from the start. Luxury is quiet when it truly supports living."
+      ],
+      "image": "https://images.unsplash.com/photo-1693578616322-c8abe6c7393d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+      "imageAlt": "Atelier desk"
+    },
+    "directors": {
+      "title": "Directors",
+      "subtitle": "Senior oversight on every project.",
+      "items": [
+        {
+          "name": "A. Wirawan",
+          "role": "Principal Architect",
+          "img": "https://images.unsplash.com/photo-1620668233692-c83e9563f337?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774",
+          "bio": "Leads architectural vision with emphasis on disciplined proportion, daylight, and serviceable details."
+        },
+        {
+          "name": "N. Prameswari",
+          "role": "Design Director, Interiors",
+          "img": "https://images.unsplash.com/photo-1738739907559-8998f9e6e626?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774",
+          "bio": "Orchestrates interior palettes and joinery systems—warm tactility, calm tonality, and enduring comfort."
+        }
+      ]
+    },
+    "pillars": {
+      "title": "Philosophy",
+      "items": [
+        {
+          "title": "Proportion First",
+          "description": "We draw from classical orders and modern constraints. Each room balanced before embellishment."
+        },
+        {
+          "title": "Material Honesty",
+          "description": "Stone feels like stone; timber like timber. Finishes are chosen for aging gracefully."
+        },
+        {
+          "title": "Light as a Material",
+          "description": "Daylight is shaped, not added. Shadow gives measure—the contrast stays restrained."
+        },
+        {
+          "title": "Quiet Utility",
+          "description": "Details disappear into function. Comfort and service access are designed, not appended."
+        }
+      ]
+    },
+    "approach": {
+      "title": "Approach",
+      "description": "From discovery to post-occupancy tuning, we keep one clear thread: proportion, material, and light aligned with daily use.",
+      "steps": [
+        {
+          "key": "01",
+          "title": "Discovery & Brief",
+          "description": "Programme mapping, priorities, budget, and schedule alignment."
+        },
+        {
+          "key": "02",
+          "title": "Concept & Proportion",
+          "description": "Massing, plan studies, light strategy, palette direction."
+        },
+        {
+          "key": "03",
+          "title": "Design Development",
+          "description": "Joinery, material layers, envelope performance, coordination."
+        },
+        {
+          "key": "04",
+          "title": "Documentation",
+          "description": "Tender packs, specifications, cost reviews."
+        },
+        {
+          "key": "05",
+          "title": "Delivery & Tuning",
+          "description": "Site review, commissioning, post-occupancy fine-tuning."
+        }
+      ]
+    },
+    "accolades": {
+      "title": "Accolades",
+      "items": [
+        {
+          "label": "Regional Design Awards",
+          "value": "Shortlist 2023"
+        },
+        {
+          "label": "Interior Craft Awards",
+          "value": "Nominee 2024"
+        }
+      ]
+    },
+    "publications": {
+      "title": "Publications",
+      "items": [
+        {
+          "name": "Anthology",
+          "logo": "https://images.unsplash.com/photo-1596079890687-58c51d24889a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774https://images.unsplash.com/photo-1596079890687-58c51d24889a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774",
+          "href": "#"
+        },
+        {
+          "name": "Frame",
+          "logo": "https://images.unsplash.com/photo-1664711942326-2c3351e215e6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1634",
+          "href": "#"
+        },
+        {
+          "name": "Dezeen",
+          "logo": "https://images.unsplash.com/photo-1637787687868-620915e3b4b5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1160",
+          "href": "#"
+        },
+        {
+          "name": "Wallpaper*",
+          "logo": "https://images.unsplash.com/photo-1654511043142-3785f5e4c8e9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870",
+          "href": "#"
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Atelier Gallery",
+      "locations": "Jakarta • Singapore",
+      "items": [
+        {
+          "src": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0",
+          "ratio": "hero",
+          "title": "Atelier Overview",
+          "meta": "Diffuse daylight, quiet palette"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6",
+          "ratio": "port",
+          "title": "Studio Entry",
+          "meta": "Morning light, travertine"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1537726235470-8504e3beef77?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+          "ratio": "land",
+          "title": "Open Desk",
+          "meta": "Pin-up wall & shelving"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2062",
+          "ratio": "port",
+          "title": "Materials Bank",
+          "meta": "Oak, brass, stone"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1613914049786-b7e3e8323348?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+          "ratio": "land",
+          "title": "Meeting Nook",
+          "meta": "Soft seating in corner"
+        }
+      ]
+    },
+    "clients": {
+      "title": "Selected Clients",
+      "items": [
+        "Aman Group",
+        "Tokopedia",
+        "UOB",
+        "Sequis",
+        "Sinar Mas",
+        "Artotel",
+        "Unilever",
+        "BCA"
+      ]
+    },
+    "timeline": {
+      "title": "Timeline",
+      "items": [
+        {
+          "year": "2019",
+          "text": "Studio founded; first residential commissions."
+        },
+        {
+          "year": "2021",
+          "text": "Regional hospitality & commercial projects."
+        },
+        { "year": "2023", "text": "Press features and award shortlistings." },
+        {
+          "year": "2025",
+          "text": "Lifecycle-driven specifications institutionalized."
+        }
+      ]
+    },
+    "quote": {
+      "text": "“AIL delivered a home that is both quiet and deeply functional. The craft holds up to daily life.”",
+      "attribution": "Client — Private Residence, 2024"
+    },
+    "cta": {
+      "title": "Start a Project",
+      "description": "Share your brief and timeline—we will respond with an initial read and scope.",
+      "contactLabel": "Contact Form",
+      "emailLabel": "Email Studio",
+      "emailSubject": "Project Enquiry — AIL Studio"
+    }
+  },
+  "studio": {
+    "metadataTitle": "Studio — AIL Studio",
+    "hero": {
+      "title": "Studio",
+      "description": "We design with restraint: durable materials, measured contrasts, serene proportions.",
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1606744888344-493238951221?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1548",
+          "alt": "Studio process"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1512972972907-6d71529c5e92?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1742",
+          "alt": "Material board"
+        }
+      ]
+    },
+    "principles": {
+      "title": "Principles",
+      "description": "Our work is built on discipline. Each project starts from proportion and light, then narrows into detail and material that will age with dignity. We aim for rooms that feel inevitable—quiet, functional, and generous in everyday use.",
+      "approach": [
+        "Restraint over excess; proportion before ornament.",
+        "Natural light as material; shadow as measure.",
+        "Durable, serviceable, and calm palettes.",
+        "Detailing that disappears into experience."
+      ]
+    },
+    "numbersHeading": "Studio Numbers",
+    "numbers": [
+      { "label": "Years Active", "value": "2019–Now" },
+      { "label": "Projects Delivered", "value": "80+" },
+      { "label": "Regional Reach", "value": "SEA & Beyond" },
+      { "label": "Disciplines", "value": "Architecture • Interiors • Living" }
+    ],
+    "capabilities": {
+      "title": "Capabilities",
+      "items": [
+        {
+          "category": "Architecture",
+          "items": [
+            "Concept & Massing",
+            "Planning & Permitting",
+            "Envelope & Facade",
+            "Detail & Spec"
+          ]
+        },
+        {
+          "category": "Interiors",
+          "items": [
+            "Spatial Programming",
+            "Joinery & Millwork",
+            "Materials & Finishes",
+            "Lighting Coordination"
+          ]
+        },
+        {
+          "category": "Living",
+          "items": [
+            "Furniture & Styling",
+            "Art Curation",
+            "Landscape Coordination",
+            "Post-occupancy Tuning"
+          ]
+        }
+      ]
+    },
+    "timeline": {
+      "title": "Timeline",
+      "items": [
+        {
+          "year": "2019",
+          "title": "Studio Founded",
+          "description": "Initial residential commissions with a focus on calm interiors."
+        },
+        {
+          "year": "2021",
+          "title": "Regional Work",
+          "description": "Commercial and hospitality projects across Southeast Asia."
+        },
+        {
+          "year": "2023",
+          "title": "Recognition",
+          "description": "Shortlisted for design awards; publications and press features."
+        },
+        {
+          "year": "2025",
+          "title": "Sustainability",
+          "description": "Lifecycle-driven specs and passive strategies institutionalized."
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Atelier Gallery",
+      "locations": "Jakarta • Singapore",
+      "items": [
+        {
+          "src": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0",
+          "ratio": "hero",
+          "title": "Atelier Overview",
+          "meta": "Diffuse daylight, quiet palette"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6",
+          "ratio": "port",
+          "title": "Studio Entry",
+          "meta": "Morning light, travertine"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1537726235470-8504e3beef77?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+          "ratio": "land",
+          "title": "Open Desk",
+          "meta": "Pin-up wall & shelving"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2062",
+          "ratio": "port",
+          "title": "Materials Bank",
+          "meta": "Oak, brass, stone"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1613914049786-b7e3e8323348?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+          "ratio": "land",
+          "title": "Meeting Nook",
+          "meta": "Soft seating in corner"
+        }
+      ]
+    },
+    "careers": {
+      "title": "Careers & Collaborations",
+      "description": "We welcome portfolios from architects, interior designers, and collaborators who value disciplined craft. Send your CV and selected works in PDF (max 10 MB).",
+      "emailLabel": "Email Studio",
+      "contactLabel": "Start a Project",
+      "emailSubject": "Career Enquiry — AIL Studio"
+    }
+  },
+  "contact": {
+    "metadataTitle": "Contact — AIL Studio",
+    "hero": {
+      "eyebrow": "Contact AIL Studio",
+      "title": "Start a project conversation.",
+      "description": "Share your brief and timeline—we will reply via WhatsApp with an initial read and outline.",
+      "image": "https://images.unsplash.com/photo-1700475021612-1005dfda26ab?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+      "imageAlt": "Studio tone"
+    },
+    "sidebar": {
+      "title": "General Enquiries",
+      "email": "studio@example.com",
+      "hoursLabel": "Office Hours",
+      "hoursValue": "Mon–Fri, 10:00–18:00",
+      "phoneLabel": "Phone",
+      "phoneValue": "+62 21 0000 0000",
+      "jakartaLabel": "Jakarta",
+      "jakartaValue": "Kebayoran Baru",
+      "singaporeLabel": "Singapore",
+      "singaporeValue": "River Valley",
+      "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+      "imageAlt": "Studio exterior"
+    },
+    "note": "Include an estimated budget and target dates if available. Detailed files can follow once the WhatsApp chat begins."
+  },
+  "contactForm": {
+    "title": "Project Enquiry",
+    "description": "We respond via WhatsApp within 2–3 business days.",
+    "types": ["Project", "Collaboration", "Press"],
+    "projectTypes": [
+      "Residential",
+      "Hospitality",
+      "Workspace",
+      "Retail",
+      "Mixed-use"
+    ],
+    "budgetPresets": [
+      "Under USD 250k",
+      "USD 250k–500k",
+      "USD 500k–1M",
+      "USD 1M+"
+    ],
+    "timelinePresets": [
+      "0–3 months",
+      "3–6 months",
+      "6–12 months",
+      "12+ months"
+    ],
+    "placeholders": {
+      "name": "Full name *",
+      "email": "Email *",
+      "phone": "WhatsApp number (optional)",
+      "location": "Project location (city/country)",
+      "message": "Tell us about scope, rooms/areas, constraints, and goals. *"
+    },
+    "labels": {
+      "projectType": "Project type",
+      "budget": "Budget",
+      "timeline": "Timeline"
+    },
+    "errors": {
+      "global": "Please take a moment to complete the form.",
+      "name": "Name is required.",
+      "email": "Valid email is required.",
+      "message": "Please tell us a bit about the project."
+    },
+    "buttons": {
+      "submit": "Send via WhatsApp",
+      "submitting": "Opening WhatsApp…"
+    },
+    "success": "Redirected to WhatsApp. If it didn’t open, allow pop-ups and try again.",
+    "whatsAppMessage": "Hi AIL Studio, I’d love to discuss a new project. Could we chat?",
+    "whatsAppSubject": "{type} Enquiry — AIL Studio",
+    "messageLabels": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "WhatsApp",
+      "location": "Location",
+      "type": "Type",
+      "budget": "Budget",
+      "timeline": "Timeline",
+      "message": "Message:"
+    }
+  },
+  "mapBanner": {
+    "label": "Studio",
+    "locations": "Jakarta • Singapore",
+    "imageAlt": "Map placeholder"
+  },
+  "whatsAppButton": {
+    "label": "WhatsApp",
+    "message": "Hi AIL Studio, I’d love to discuss a new project. Could we chat?",
+    "ariaLabel": "Chat on WhatsApp"
+  },
+  "globalLoader": {
+    "tagline": "Architecture • Interiors • Living",
+    "srLoading": "Loading"
+  },
+  "seo": {
+    "title": "Architecture • Interiors • Living",
+    "description": "Luxury architecture & interior studio crafting bespoke spaces for residential and commercial clients."
+  },
+  "data": {
+    "projects": [
+      {
+        "slug": "residence-lumiere",
+        "title": "Residence Lumière",
+        "location": "Jakarta, ID",
+        "cover": "/hero-frame-1.webp",
+        "year": "2025",
+        "tags": ["Residential", "Interior"],
+        "images": [
+          "/hero-frame-1.webp",
+          "/project-residence-2.webp",
+          "/project-residence-3.webp"
+        ],
+        "chapters": [
+          {
+            "key": "arrival",
+            "title": "Arrival",
+            "prose": "A soft gradient of light guides the entry sequence, balancing privacy and openness.",
+            "image": "https://images.unsplash.com/photo-1497366216548-37526070297c",
+            "gallery": [
+              {
+                "src": "https://images.unsplash.com/photo-1605774337664-7a846e9cdf17?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1548",
+                "ratio": "landscape"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870",
+                "ratio": "portrait"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=654",
+                "ratio": "portrait"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1524758631624-e2822e304c36",
+                "ratio": "landscape"
+              }
+            ]
+          },
+          {
+            "key": "gallery",
+            "title": "Gallery",
+            "prose": "A restrained palette frames art and vistas in measured proportions.",
+            "image": "https://images.unsplash.com/photo-1606744888344-493238951221?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1548",
+            "gallery": [
+              {
+                "src": "https://images.unsplash.com/photo-1618221469555-7f3ad97540d6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2064",
+                "ratio": "landscape"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1622372738946-62e02505feb3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1064",
+                "ratio": "portrait"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1501045661006-fcebe0257c3f",
+                "ratio": "landscape"
+              }
+            ]
+          },
+          {
+            "key": "salon",
+            "title": "Salon",
+            "prose": "Joinery and brass accents lend warmth to the quiet living core.",
+            "image": "https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2660",
+            "gallery": [
+              {
+                "src": "https://images.unsplash.com/photo-1653972233229-1b8c042d6d8e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2064",
+                "ratio": "landscape"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774",
+                "ratio": "portrait"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+                "ratio": "landscape"
+              }
+            ]
+          }
+        ],
+        "specs": [
+          { "label": "Client", "value": "Private" },
+          { "label": "Area", "value": "380 m²" },
+          { "label": "Program", "value": "Residential — Interiors" },
+          {
+            "label": "Materials",
+            "value": "Travertine, Brushed Oak, Aged Brass"
+          },
+          {
+            "label": "Consultants",
+            "value": "Lighting Lab, Verde Landscape"
+          }
+        ],
+        "beforeAfter": {
+          "before": "https://images.unsplash.com/photo-1724166655256-0ae10f1ab89a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1742",
+          "after": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0"
+        }
+      },
+      {
+        "slug": "the-brass-house",
+        "title": "The Brass House",
+        "location": "Bandung, ID",
+        "cover": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+        "year": "2024",
+        "tags": ["Residential", "Architecture"],
+        "images": [
+          "/project-thebrash-1.webp",
+          "/project-thebrash-2.webp",
+          "/project-thebrash-3.webp"
+        ],
+        "chapters": [
+          {
+            "key": "threshold",
+            "title": "Threshold",
+            "prose": "Brass thresholds signal transitions between public and intimate zones.",
+            "image": "https://images.unsplash.com/photo-1618219740975-d40978bb7378?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2200"
+          },
+          {
+            "key": "void",
+            "title": "Void",
+            "prose": "A vertical void draws daylight across floors, easing environmental loads.",
+            "image": "https://images.unsplash.com/photo-1652474149355-34341222e811?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1934"
+          },
+          {
+            "key": "terrace",
+            "title": "Terrace",
+            "prose": "Planting and stone carve microclimates for daily rituals.",
+            "image": "https://images.unsplash.com/photo-1717355036058-b3a66c647cad?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740"
+          }
+        ],
+        "specs": [
+          { "label": "Client", "value": "Private" },
+          { "label": "Area", "value": "380 m²" },
+          { "label": "Program", "value": "Residential — Interiors" },
+          {
+            "label": "Materials",
+            "value": "Travertine, Brushed Oak, Aged Brass"
+          },
+          {
+            "label": "Consultants",
+            "value": "Lighting Lab, Verde Landscape"
+          }
+        ],
+        "beforeAfter": {
+          "before": "https://images.unsplash.com/photo-1724166655256-0ae10f1ab89a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1742",
+          "after": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0"
+        }
+      },
+      {
+        "slug": "alto-atelier",
+        "title": "Alto Atelier",
+        "location": "Singapore",
+        "cover": "/project-alto-1.webp",
+        "year": "2025",
+        "tags": ["Commercial", "Interior"],
+        "images": [
+          "/project-alto-1.webp",
+          "/project-alto-2.webp",
+          "/project-alto-3.webp"
+        ],
+        "chapters": [
+          {
+            "key": "atelier",
+            "title": "Atelier",
+            "prose": "A flexible production floor integrates craft benches and soft meeting bays.",
+            "image": "https://images.unsplash.com/photo-1501045661006-fcebe0257c3f"
+          },
+          {
+            "key": "mezzanine",
+            "title": "Mezzanine",
+            "prose": "Lightweight steel and linen screens delineate collaboration pockets.",
+            "image": "https://images.unsplash.com/photo-1497366216548-37526070297c"
+          },
+          {
+            "key": "lounge",
+            "title": "Lounge",
+            "prose": "A calm lounge buffers the city with tone-on-tone textures.",
+            "image": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0"
+          }
+        ],
+        "specs": [
+          { "label": "Client", "value": "Private" },
+          { "label": "Area", "value": "380 m²" },
+          { "label": "Program", "value": "Residential — Interiors" },
+          {
+            "label": "Materials",
+            "value": "Travertine, Brushed Oak, Aged Brass"
+          },
+          {
+            "label": "Consultants",
+            "value": "Lighting Lab, Verde Landscape"
+          }
+        ],
+        "beforeAfter": {
+          "before": "https://images.unsplash.com/photo-1724166655256-0ae10f1ab89a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1742",
+          "after": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0"
+        }
+      }
+    ],
+    "press": [
+      {
+        "slug": "dezeen-urban-calm",
+        "name": "Dezeen",
+        "year": "2025",
+        "title": "Urban Calm: Brass and Travertine Apartment",
+        "url": "https://www.dezeen.com/",
+        "logo": "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6"
+      },
+      {
+        "slug": "archdaily-lumiere",
+        "name": "ArchDaily",
+        "year": "2024",
+        "title": "Lumière Residence: A Dialogue with Light",
+        "url": "https://www.archdaily.com/",
+        "logo": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4"
+      },
+      {
+        "slug": "wallpaper-quiet-luxury",
+        "name": "Wallpaper*",
+        "year": "2024",
+        "title": "Quiet Luxury: Material Honesty at Home",
+        "url": "https://www.wallpaper.com/",
+        "logo": "https://images.unsplash.com/photo-1540148426945-4c6d8fea0ecb"
+      }
+    ],
+    "materials": [
+      {
+        "key": "oak-brush",
+        "name": "Brushed Oak",
+        "desc": "Warm grain with brushed texture for subtle depth.",
+        "swatch": "/project-alto-3.webp",
+        "preview": "/project-alto-3.webp"
+      },
+      {
+        "key": "travertine",
+        "name": "Roman Travertine",
+        "desc": "Porous stone with honed finish, timeless and calm.",
+        "swatch": "/material-2.webp",
+        "preview": "/material-2.webp"
+      },
+      {
+        "key": "brass",
+        "name": "Aged Brass",
+        "desc": "Soft sheen with hand-rubbed patina.",
+        "swatch": "/material-3.webp",
+        "preview": "/material-3.webp"
+      },
+      {
+        "key": "linen",
+        "name": "Natural Linen",
+        "desc": "Neutral weave for acoustic softness.",
+        "swatch": "/material-4.webp",
+        "preview": "/material-4.webp"
+      }
+    ],
+    "posts": [
+      {
+        "slug": "proportion-light",
+        "title": "Proportion and Light in Quiet Luxury",
+        "cover": "/project-thebrash-2.webp",
+        "tag": "Insight",
+        "excerpt": "How measured geometry and soft gradients shape atmosphere."
+      },
+      {
+        "slug": "material-honesty",
+        "title": "Material Honesty: Patina Over Time",
+        "cover": "/post-2.webp",
+        "tag": "Journal",
+        "excerpt": "Selecting noble finishes that age with dignity."
+      },
+      {
+        "slug": "craft-joinery",
+        "title": "Crafted Joinery for Calm Interiors",
+        "cover": "/hero-frame-1.webp",
+        "tag": "Practice",
+        "excerpt": "Why junctions and edges define the whole."
+      }
+    ]
+  }
+}

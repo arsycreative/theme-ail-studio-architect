@@ -1,10 +1,13 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 export default function ChapterGallery({ items = [] }) {
   const ref = useRef(null);
+  const tCursor = useTranslations("common.cursor");
+  const tAlt = useTranslations("common.alt");
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -38,11 +41,11 @@ export default function ChapterGallery({ items = [] }) {
                 ? "md:col-span-2 aspect-[16/10]"
                 : "md:col-span-1 aspect-[3/4]"
             }`}
-            data-cursor="View"
+            data-cursor={tCursor("view")}
           >
             <Image
               src={it.src}
-              alt="Chapter image"
+              alt={it.alt ?? it.title ?? tAlt("galleryImage")}
               fill
               className="object-cover"
               sizes={

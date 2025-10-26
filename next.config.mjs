@@ -1,5 +1,9 @@
+import createNextIntlPlugin from "next-intl/plugin";
+
 /** @type {import('next').NextConfig} */
 const isDev = process.env.NODE_ENV !== "production";
+
+const withNextIntl = createNextIntlPlugin("./src/i18n/request.js");
 
 const nextConfig = {
   images: {
@@ -25,4 +29,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

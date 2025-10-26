@@ -1,11 +1,14 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function BeforeAfterSlider({ before, after, aspect = "16/9" }) {
   const wrapRef = useRef(null);
   const draggingRef = useRef(false);
   const [pos, setPos] = useState(0.5); // 0..1
+  const tCursor = useTranslations("common.cursor");
+  const tSlider = useTranslations("common.slider");
 
   const clamp = useCallback((v) => Math.min(1, Math.max(0, v)), []);
 
@@ -121,13 +124,13 @@ export default function BeforeAfterSlider({ before, after, aspect = "16/9" }) {
       ref={wrapRef}
       className="relative rounded-2xl overflow-hidden border border-border/70 select-none touch-pan-y"
       style={{ aspectRatio: aspect }}
-      data-cursor="Drag"
-      aria-label="Before after slider"
+      data-cursor={tCursor("drag")}
+      aria-label={tSlider("aria")}
     >
       {/* AFTER at bottom */}
       <Image
         src={after}
-        alt="After"
+        alt={tSlider("after")}
         fill
         className="object-cover"
         sizes="100vw"
@@ -140,7 +143,7 @@ export default function BeforeAfterSlider({ before, after, aspect = "16/9" }) {
       >
         <Image
           src={before}
-          alt="Before"
+          alt={tSlider("before")}
           fill
           className="object-cover"
           sizes="100vw"
@@ -156,7 +159,7 @@ export default function BeforeAfterSlider({ before, after, aspect = "16/9" }) {
         <div className="h-full w-0.5 bg-foreground/80" />
         <div className="absolute top-1/2 -translate-y-1/2 -left-3 flex items-center gap-2">
           <span className="rounded-full bg-background/80 border border-border/70 px-2 py-1 text-xs">
-            Drag
+            {tCursor("drag")}
           </span>
         </div>
       </div>

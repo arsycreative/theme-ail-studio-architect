@@ -2,15 +2,18 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { gsap, Flip } from "@/lib/gsap";
 import { Badge } from "@/components/ui/badge";
 import ProjectQuickView from "@/components/sections/ProjectQuickView";
+import { useTranslations } from "next-intl";
 
 export default function ProjectsGallery({ items = [], density = "Comfort" }) {
   const wrapRef = useRef(null);
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState(null);
+  const tCommon = useTranslations("common");
+  const tCursor = useTranslations("common.cursor");
 
   // FLIP on items change (filter/sort)
   useEffect(() => {
@@ -78,10 +81,10 @@ export default function ProjectsGallery({ items = [], density = "Comfort" }) {
                       setOpen(true);
                     }}
                     className="rounded-lg border border-border/70 bg-background/70 px-3 py-1.5 text-xs"
-                    data-cursor="Quick View"
-                    aria-label="Quick View"
+                    data-cursor={tCommon("cta.quickView")}
+                    aria-label={tCommon("cta.quickView")}
                   >
-                    Quick View
+                    {tCommon("cta.quickView")}
                   </button>
                 </div>
               </div>
@@ -100,6 +103,7 @@ export default function ProjectsGallery({ items = [], density = "Comfort" }) {
                     <Link
                       href={`/case-studies/${p.slug}`}
                       className="underline-offset-4 hover:underline"
+                      data-cursor={tCursor("view")}
                     >
                       {p.title}
                     </Link>
